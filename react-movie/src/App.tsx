@@ -1,6 +1,6 @@
 import './App.css';
 import Menu from './Menu';
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import routes from './route-config'
 
 function App() {
@@ -10,12 +10,12 @@ function App() {
     <BrowserRouter>
       <Menu />
       <div className="container">
-        <Routes>
+        <Switch>
           {routes.map(route => 
-          <Route key={route.path} path={route.path} element={route.exact}>
+          <Route key={route.path} path={route.path} exact={route.exact}>
             <route.component />
           </Route>)}
-        </Routes>
+        </Switch>
       </div>
     </BrowserRouter>
 

@@ -1,10 +1,14 @@
-
+import IndexGenres from "./genres/IndexGenres";
+import CreateGenre from "./genres/CreateGenre";
+import EditGenre from "./genres/EditGenre";
 
 import IndexActors from "./actors/IndexActors";
 import CreateActor from "./actors/CreateActor";
 import EditActor from "./actors/EditActor";
 
-
+import IndexMovieTheaters from "./movietheaters/IndexMovieTheaters";
+import CreateMovieTheater from "./movietheaters/CreateMovieTheater";
+import EditMovieTheater from "./movietheaters/EditMovieTheater";
 
 import CreateMovie from "./movies/CreateMovie";
 import EditMovie from "./movies/EditMovie";
@@ -12,12 +16,6 @@ import FilterMovies from "./movies/FilterMovies";
 
 import LandingPage from "./movies/LandingPage";
 import RedirectToLandingPage from './utils/RedirectToLandingPage';
-import IndexGenres from "./genres/IndexGenres";
-import CreateGenre from "./genres/CreateGenre";
-import EditGenre from "./genres/EditGenre";
-import IndexMovieTheaters from "./movietheaters.tsx/IndexMovieTheaters";
-import CreateMovieTheater from "./movietheaters.tsx/CreateMovieTheater";
-import EditMovieTheater from "./movietheaters.tsx/EditMovieTheater";
 
 const routes = [
     {path: '/genres', component: IndexGenres, exact: true},
