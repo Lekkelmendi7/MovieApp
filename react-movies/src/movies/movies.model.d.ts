@@ -6,6 +6,6 @@ export interface movieDTO{
 
 export interface landingPageDTO {
     inTheaters ?: movieDTO[];
-    upComingReleases ?: movieDTO[];
+    upcomingReleases ?: movieDTO[];
 
 }

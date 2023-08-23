@@ -21,7 +21,7 @@ export default function LandingPage(){
           poster: 'https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_FMjpg_UX1000_.jpg'
         }
       ],
-      upComingReleases: [
+      upcomingReleases: [
         {
           id: 3,
           title: 'Ted 2',
@@ -40,7 +40,7 @@ export default function LandingPage(){
       <MoviesList movies={movies.inTheaters} />
 
       <h3>Upcoming Releases</h3>
-      <MoviesList movies={movies.upComingReleases} />
+      <MoviesList movies={movies.upcomingReleases} />
         </>
     )
 }
