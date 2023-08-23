@@ -4,7 +4,7 @@ import TextField from '../forms/TextField';
 import DateField from '../forms/DateField';
 import Button from '../utils/Button';
 import * as Yup from 'yup';
-import { actorCreationDTO } from "./actors.mode";
+import { actorCreationDTO } from "./actors.model";
 import ImageField from "../forms/ImageField";
 import MarkdownField from "../forms/MarkdownField";
 
