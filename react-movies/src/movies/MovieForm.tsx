@@ -10,9 +10,10 @@ import MultipleSelector, { multipleSelectorModel } from '../forms/MultipleSelect
 import { useState } from "react";
 import { genreDTO } from "../genres/genres.model";
 import { movieTheaterDTO } from "../movietheaters/movieTheater.model";
-import TypeAheadActor from '../forms/TypeAheadActor';
+
 import { actorMovieDTO } from "../actors/actors.model";
 import CheckboxField from "../forms/CheckBoxField";
+import TypeAheadActor from "../forms/TypeAheadActor";
 
 export default function MovieForm(props: movieFormProps) {
 

@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
-form > a{
+form > a {
   margin-left: 1rem;
+}
+
+.pointer {
+  cursor: pointer;
 }
