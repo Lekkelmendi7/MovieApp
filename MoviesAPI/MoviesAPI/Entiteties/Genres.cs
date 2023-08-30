@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MoviesAPI.Entities
 {
-    public class Genre
+    public class Genres
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "The field with name {0} is required")]
