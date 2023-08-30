@@ -61,3 +61,5 @@ C:\Users\ShopZone\MovieApp\MoviesAPI\obj\Debug\net6.0\refint\MoviesAPI.dll
 C:\Users\ShopZone\MovieApp\MoviesAPI\obj\Debug\net6.0\MoviesAPI.pdb
 C:\Users\ShopZone\MovieApp\MoviesAPI\obj\Debug\net6.0\MoviesAPI.genruntimeconfig.cache
 C:\Users\ShopZone\MovieApp\MoviesAPI\obj\Debug\net6.0\ref\MoviesAPI.dll
+C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
