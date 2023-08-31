@@ -38,7 +38,6 @@ namespace MoviesAPI.Filters
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            throw new NotImplementedException();
         }
     }
 }
