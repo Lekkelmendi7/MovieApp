@@ -38,9 +38,10 @@ export default function IndexEntity<T>(props: indexEntityProps<T>) {
             loadData();
         }
         catch (error: any) {
-            if (error && error.response) {
+             if (error && error.response) {
                 console.error(error.response.data);
             }
+            
         }
     }
 
