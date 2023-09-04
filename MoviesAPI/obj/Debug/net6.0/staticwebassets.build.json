@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "RGOnVuaUuhzxy+DBbGSsQRVU71P5/wPQJlSJhlhFJ8A=",
+  "Hash": "OETtZL8LGKqruoihpQzd5qzQy26vdn1kq+IFNW5KN80=",
   "Source": "MoviesAPI",
   "BasePath": "_content/MoviesAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MoviesAPI\\wwwroot",
+      "Source": "MoviesAPI",
+      "ContentRoot": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\",
+      "BasePath": "_content/MoviesAPI",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

@@ -9,8 +9,7 @@ export default function IndexGenres() {
                 url={urlGenres} createURL="genres/create" title="Genres"
                 entityName="Genre"
             >
-                {(genres, buttons) =>
-                    <>
+                {(genres, buttons) => <>
                         <thead>
                             <tr>
                                 <th></th>
