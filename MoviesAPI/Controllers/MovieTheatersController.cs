@@ -29,7 +29,7 @@ namespace MoviesAPI.Controllers
             return mapper.Map<List<MovieTheaterDTO>>(entities);
         }
 
-        [HttpGet("{id:int")]
+        [HttpGet("{id:int}")]
         public async Task<ActionResult<MovieTheaterDTO>> Get(int id)
         {
             var movieTheater = await context.MovieTheaters.FirstOrDefaultAsync(x => x.Id == id);

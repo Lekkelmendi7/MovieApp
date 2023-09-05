@@ -58,14 +58,14 @@ namespace MoviesAPI.Controllers
             var genre = mapper.Map<Genre>(genreCreationDTO);
             context.Add(genre);
             await context.SaveChangesAsync();
-            return Ok(genre);
+            return NoContent();
         }
 
 
-        [HttpPut("{id:int}")]
-        public async Task<ActionResult> Put(int id, [FromBody] GenreCreationDTO genreCreationDTO)
+        [HttpPut("{Id:int}")]
+        public async Task<ActionResult> Put(int Id, [FromBody] GenreCreationDTO genreCreationDTO)
         {
-           var genre = await context.Genres.FirstOrDefaultAsync(x => x.Id ==id);
+           var genre = await context.Genres.FirstOrDefaultAsync(x => x.Id ==Id);
 
             if (genre == null)
             {
@@ -77,17 +77,17 @@ namespace MoviesAPI.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id:int}")]
-        public async Task<ActionResult> Delete(int id)
+        [HttpDelete("{Id:int}")]
+        public async Task<ActionResult> Delete(int Id)
         {
-            var exists = await context.Genres.AnyAsync(x => x.Id == id);
+            var exists = await context.Genres.AnyAsync(x => x.Id == Id);
 
             if (!exists)
             {
                 return NotFound();
             }
 
-            context.Remove(new Genre() { Id = id });
+            context.Remove(new Genre() { Id = Id });
             await context.SaveChangesAsync();
             return NoContent(); 
 

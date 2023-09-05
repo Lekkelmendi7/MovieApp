@@ -30,23 +30,25 @@ namespace MoviesAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+            sqlOptions => sqlOptions.UseNetTopologySuite()));
+
+
+
             services.AddControllers(options =>
             {
                 options.Filters.Add(typeof(MyExceptionFilter));
                 options.Filters.Add(typeof(ParseBadRequest));
             }).ConfigureApiBehaviorOptions(BadRequestBehaviour.Parse);
 
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MoviesAPI", Version = "v1" });
             });
-            
-            services.AddDbContext<ApplicationDbContext>(options =>
-          options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
-          sqlOptions => sqlOptions.UseNetTopologySuite()));
-
-
 
             services.AddCors(options =>
             {
@@ -54,13 +56,9 @@ namespace MoviesAPI
                 options.AddDefaultPolicy(builder =>
                 {
                     builder.WithOrigins(frontendURL).AllowAnyMethod().AllowAnyHeader()
-                    .WithExposedHeaders(new string[] { "totalAmountOfRecords"});
-
+                        .WithExposedHeaders(new string[] { "totalAmountOfRecords" });
                 });
             });
-        
-
-            services.AddAutoMapper(typeof(Startup));
 
             services.AddSingleton(provider => new MapperConfiguration(config =>
             {
@@ -68,11 +66,9 @@ namespace MoviesAPI
                 config.AddProfile(new AutoMapperProfile(geometryFactory));
             }).CreateMapper());
 
-            services.AddSingleton<GeometryFactory>(NtsGeometryServices.
-                Instance.CreateGeometryFactory(srid: 4326));
+            services.AddSingleton<GeometryFactory>(NtsGeometryServices
+                .Instance.CreateGeometryFactory(srid: 4326));
 
-
-            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
