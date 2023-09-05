@@ -34,13 +34,18 @@ namespace MoviesAPI
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
             sqlOptions => sqlOptions.UseNetTopologySuite()));
 
+            services.AddAutoMapper(typeof(Startup));
 
+            services.AddScoped<IFileStorageService, InAppStorageService>();
+            services.AddHttpContextAccessor();
 
             services.AddControllers(options =>
             {
                 options.Filters.Add(typeof(MyExceptionFilter));
                 options.Filters.Add(typeof(ParseBadRequest));
             }).ConfigureApiBehaviorOptions(BadRequestBehaviour.Parse);
+
+
 
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
@@ -82,6 +87,7 @@ namespace MoviesAPI
             }
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles();   
             app.UseRouting();
             app.UseCors();
             app.UseAuthorization();
