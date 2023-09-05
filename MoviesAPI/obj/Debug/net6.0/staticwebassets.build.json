@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OETtZL8LGKqruoihpQzd5qzQy26vdn1kq+IFNW5KN80=",
+  "Hash": "1jx8FmA0dS5Z+n5BMM/mBX1Rqspuevqgat49aX5PG1w=",
   "Source": "MoviesAPI",
   "BasePath": "_content/MoviesAPI",
   "Mode": "Default",
@@ -15,5 +15,23 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\actors\\64e27ee6-2b9a-4544-afef-6234b0e7d332.jpg",
+      "SourceId": "MoviesAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\",
+      "BasePath": "_content/MoviesAPI",
+      "RelativePath": "actors/64e27ee6-2b9a-4544-afef-6234b0e7d332.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\actors\\64e27ee6-2b9a-4544-afef-6234b0e7d332.jpg"
+    }
+  ]
 }

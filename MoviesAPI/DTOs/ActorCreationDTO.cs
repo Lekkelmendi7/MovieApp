@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
 namespace MoviesAPI.DTOs
 {
     public class ActorCreationDTO

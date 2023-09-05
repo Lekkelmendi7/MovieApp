@@ -1,1 +1,1 @@
-{"ContentRoots":["C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\"],"Root":{"Children":null,"Asset":null,"Patterns":[{"ContentRootIndex":0,"Pattern":"**","Depth":0}]}}
+{"ContentRoots":["C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\"],"Root":{"Children":{"actors":{"Children":{"64e27ee6-2b9a-4544-afef-6234b0e7d332.jpg":{"Children":null,"Asset":{"ContentRootIndex":0,"SubPath":"actors/64e27ee6-2b9a-4544-afef-6234b0e7d332.jpg"},"Patterns":null}},"Asset":null,"Patterns":null}},"Asset":null,"Patterns":[{"ContentRootIndex":0,"Pattern":"**","Depth":0}]}}
