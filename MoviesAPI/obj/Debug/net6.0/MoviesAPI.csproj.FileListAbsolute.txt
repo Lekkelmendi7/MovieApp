@@ -74,3 +74,4 @@ C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\NetTopologySuite.IO.SqlSer
 C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\System.IO.Hashing.dll
 C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\System.Memory.Data.dll
 C:\Users\ShopZone\MovieApp\MoviesAPI\obj\Debug\net6.0\EFCoreSqlServerNetTopologySuite.cs
+C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\Newtonsoft.Json.dll

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5fy7oGf6Sah7anq0V0AQP/FRlQyy+2NoEcsur8w50kt3L+7nENivJVUkOjHmAEN+HnptA9xFePhpeg4J7ZzVXg==",
+  "dgSpecHash": "PD1/5DIE3qlNEfNfKKGy2EGQnRsu/ER6BqhY0EiabE29F1OCELT8IE/nA36OE6AjKXKyoayBggK63yItiMBtXQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\MoviesAPI.csproj",
   "expectedPackageFiles": [
@@ -45,6 +45,7 @@
     "C:\\Users\\ShopZone\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\ShopZone\\.nuget\\packages\\nettopologysuite\\2.3.0\\nettopologysuite.2.3.0.nupkg.sha512",
     "C:\\Users\\ShopZone\\.nuget\\packages\\nettopologysuite.io.sqlserverbytes\\2.0.0\\nettopologysuite.io.sqlserverbytes.2.0.0.nupkg.sha512",
+    "C:\\Users\\ShopZone\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\ShopZone\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\ShopZone\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\ShopZone\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
