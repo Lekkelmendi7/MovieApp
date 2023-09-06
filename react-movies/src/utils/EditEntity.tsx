@@ -38,7 +38,11 @@ export default function EditEntity<TCreation, TRead>
         }
         catch (error: any) {
             if (error && error.response) {
-                setErrors(error.response.data);
+                if (Array.isArray(error.response.data)){
+                    setErrors(error.response.data);
+                } else{
+                    setErrors(['An error has occurred']);
+                }
             }
         }
     }
