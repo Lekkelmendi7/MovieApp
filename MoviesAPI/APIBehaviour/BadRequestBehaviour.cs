@@ -1,10 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace MoviesAPI.APIBehaviour
+namespace MoviesAPI.APIBehavior
 {
-    public class BadRequestBehaviour
+    public class BadRequestsBehavior
     {
-        public static void Parse (ApiBehaviorOptions options)
+        public static void Parse(ApiBehaviorOptions options)
         {
             options.InvalidModelStateResponseFactory = context =>
             {
@@ -14,7 +18,6 @@ namespace MoviesAPI.APIBehaviour
                     foreach (var error in context.ModelState[key].Errors)
                     {
                         response.Add($"{key}: {error.ErrorMessage}");
-
                     }
                 }
                 return new BadRequestObjectResult(response);

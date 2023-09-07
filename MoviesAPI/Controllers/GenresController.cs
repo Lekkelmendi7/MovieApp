@@ -29,7 +29,7 @@ namespace MoviesAPI.Controllers
             this.mapper = mapper;
         }
 
-        [HttpGet] // api/genres
+        [HttpGet] 
         public async Task<ActionResult<List<GenreDTO>>> Get([FromQuery] PaginationDTO paginationDTO)
         {
             var queryable = context.Genres.AsQueryable();
@@ -38,7 +38,15 @@ namespace MoviesAPI.Controllers
             return mapper.Map<List<GenreDTO>>(genres);
         }
 
-        [HttpGet("{Id:int}", Name = "getGenre")] // api/genres/example
+        [HttpGet("all")] 
+        public async Task<ActionResult<List<GenreDTO>>> Get()
+        {
+            var genres = await context.Genres.OrderBy(x => x.Name).ToListAsync();
+            return mapper.Map<List<GenreDTO>>(genres);
+        }
+
+
+        [HttpGet("{Id:int}", Name = "getGenre")] 
         public async Task<ActionResult<GenreDTO>> Get(int Id)
         {
             var genre= await context.Genres.FirstOrDefaultAsync(x => x.Id == Id);   

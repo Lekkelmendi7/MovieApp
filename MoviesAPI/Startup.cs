@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using MoviesAPI.APIBehaviour;
+using MoviesAPI.APIBehavior;
 using MoviesAPI.Filters;
 using MoviesAPI.Helpers;
 using NetTopologySuite;
@@ -34,19 +34,14 @@ namespace MoviesAPI
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
             sqlOptions => sqlOptions.UseNetTopologySuite()));
 
-            services.AddAutoMapper(typeof(Startup));
-
-            services.AddScoped<IFileStorageService, InAppStorageService>();
+            services.AddScoped<IFileStorageService, InAppStorageService > ();
             services.AddHttpContextAccessor();
 
             services.AddControllers(options =>
             {
                 options.Filters.Add(typeof(MyExceptionFilter));
                 options.Filters.Add(typeof(ParseBadRequest));
-            }).ConfigureApiBehaviorOptions(BadRequestBehaviour.Parse);
-
-
-
+            }).ConfigureApiBehaviorOptions(BadRequestsBehavior.Parse);
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
 
@@ -68,7 +63,7 @@ namespace MoviesAPI
             services.AddSingleton(provider => new MapperConfiguration(config =>
             {
                 var geometryFactory = provider.GetRequiredService<GeometryFactory>();
-                config.AddProfile(new AutoMapperProfile(geometryFactory));
+                config.AddProfile(new AutoMapperProfiles(geometryFactory));
             }).CreateMapper());
 
             services.AddSingleton<GeometryFactory>(NtsGeometryServices
@@ -87,11 +82,16 @@ namespace MoviesAPI
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();   
+
+            app.UseStaticFiles();
+
             app.UseRouting();
+
             app.UseCors();
-            app.UseAuthorization();
+
             app.UseAuthentication();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

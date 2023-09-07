@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 import TextField from '../forms/TextField';
 import ImageField from '../forms/ImageField';
 import DateField from '../forms/DateField';
+import CheckboxField from '../forms/CheckBoxField';
 import MultipleSelector, { multipleSelectorModel } from '../forms/MultipleSelector';
 import { useState } from "react";
 import { genreDTO } from "../genres/genres.model";
 import { movieTheaterDTO } from "../movietheaters/movieTheater.model";
-
+import TypeAheadActor from '../forms/TypeAheadActors';
 import { actorMovieDTO } from "../actors/actors.model";
-import CheckboxField from "../forms/CheckBoxField";
-import TypeAheadActor from "../forms/TypeAheadActor";
+import MarkdownField from "../forms/MarkdownField";
 
 export default function MovieForm(props: movieFormProps) {
 
@@ -57,6 +57,8 @@ export default function MovieForm(props: movieFormProps) {
                     <ImageField displayName="Poster" field="poster"
                         imageURL={props.model.posterURL}
                     />
+
+                    <MarkdownField displayName="Summary" field="summary" />
 
                     <MultipleSelector
                         displayName="Genres"
@@ -103,7 +105,7 @@ export default function MovieForm(props: movieFormProps) {
 
                     <Button disabled={formikProps.isSubmitting}
                         type='submit'>Save Changes</Button>
-                    <Link className="btn btn-secondary" to="/genres">Cancel</Link>
+                    <Link className="btn btn-secondary" to="/">Cancel</Link>
                 </Form>
             )}
         </Formik>

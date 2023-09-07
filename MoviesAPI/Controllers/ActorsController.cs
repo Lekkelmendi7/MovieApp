@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MoviesAPI.DTOs;
-using MoviesAPI.Entiteties;
+using MoviesAPI.Entities;
 using MoviesAPI.Helpers;
 
 namespace MoviesAPI.Controllers
@@ -44,11 +44,26 @@ namespace MoviesAPI.Controllers
             return mapper.Map<ActorDTO>(actor); 
         }
 
-        [HttpPost]
-        public async Task<ActionResult> Post([FromForm] ActorCreationDTO actorCreationDTO) 
+        [HttpGet("searchByName/{query}")]
+        public async Task<ActionResult<List<ActorsMovieDTO>>> SearchByName(string query)
         {
-        var actor = mapper.Map<Actor>(actorCreationDTO);    
-            if(actorCreationDTO != null)
+            if (string.IsNullOrWhiteSpace(query)) { return new List<ActorsMovieDTO>(); }
+
+            return await context.Actors
+                .Where(x => x.Name == query)
+                .OrderBy(x => x.Name)
+                .Select(x => new ActorsMovieDTO { Id = x.Id, Name = x.Name, Picture = x.Picture })
+                .Take(5)
+                .ToListAsync();
+        }
+
+
+        [HttpPost]
+        public async Task<ActionResult> Post([FromForm] ActorCreationDTO actorCreationDTO)
+        {
+            var actor = mapper.Map<Actor>(actorCreationDTO);
+
+            if (actorCreationDTO.Picture != null)
             {
                 actor.Picture = await fileStorageService.SaveFile(containerName, actorCreationDTO.Picture);
             }
