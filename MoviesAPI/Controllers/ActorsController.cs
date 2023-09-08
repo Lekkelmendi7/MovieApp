@@ -4,11 +4,15 @@ using Microsoft.EntityFrameworkCore;
 using MoviesAPI.DTOs;
 using MoviesAPI.Entities;
 using MoviesAPI.Helpers;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MoviesAPI.Controllers
 {
-    [Route("api/actors")]
     [ApiController]
+    [Route("api/actors")]
     public class ActorsController : ControllerBase
     {
         private readonly ApplicationDbContext context;
@@ -36,12 +40,14 @@ namespace MoviesAPI.Controllers
         [HttpGet("{id:int}")]
         public async Task<ActionResult<ActorDTO>> Get(int id)
         {
-            var actor = context.Actors.FirstOrDefaultAsync(x => x.Id == id);
-            if(actor == null)
+            var actor = await context.Actors.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (actor == null)
             {
-                return NotFound();  
+                return NotFound();
             }
-            return mapper.Map<ActorDTO>(actor); 
+
+            return mapper.Map<ActorDTO>(actor);
         }
 
         [HttpGet("searchByName/{query}")]
@@ -50,13 +56,12 @@ namespace MoviesAPI.Controllers
             if (string.IsNullOrWhiteSpace(query)) { return new List<ActorsMovieDTO>(); }
 
             return await context.Actors
-                .Where(x => x.Name == query)
+                .Where(x => x.Name.Contains(query))
                 .OrderBy(x => x.Name)
                 .Select(x => new ActorsMovieDTO { Id = x.Id, Name = x.Name, Picture = x.Picture })
                 .Take(5)
                 .ToListAsync();
         }
-
 
         [HttpPost]
         public async Task<ActionResult> Post([FromForm] ActorCreationDTO actorCreationDTO)

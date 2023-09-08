@@ -5,7 +5,7 @@ import { actorDTO } from './actors.model';
 export default function IndexActors() {
     return (
         <IndexEntity<actorDTO>
-            url={urlActors} createURL='actors/create' title="Actors"
+            url={urlActors} createURL='/actors/create' title="Actors"
             entityName="Actor"
         >
             {(actors, buttons) => <>

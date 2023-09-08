@@ -1,4 +1,4 @@
-﻿﻿using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MoviesAPI.DTOs;
@@ -48,7 +48,8 @@ namespace MoviesAPI.Controllers
 
             var landingPageDTO = new LandingPageDTO();
             landingPageDTO.upcomingReleases = mapper.Map<List<MovieDTO>>(upcomingReleases);
-            landingPageDTO.inTheaters = mapper.Map<List<MovieDTO>>(inTheaters);
+            landingPageDTO.
+                inTheaters = mapper.Map<List<MovieDTO>>(inTheaters);
             return landingPageDTO;
         }
 

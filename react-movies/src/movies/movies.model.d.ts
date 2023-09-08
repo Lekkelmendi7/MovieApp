@@ -1,6 +1,7 @@
-import { actorMovieDTO } from "../actors/actors.model";
-import { genreDTO } from "../genres/genres.model";
-import { movieTheaterDTO } from "../movietheaters/movieTheater.model";
+import {genreDTO} from '../genres/genres.model'
+import {movieTheaterDTO} from '../movietheaters/movieTheater.model';
+import {actorMovieDTO} from '../actors/actors.model';
+
 export interface movieDTO {
     id: number;
     title: string;
@@ -36,7 +37,6 @@ export interface moviesPostGetDTO {
     genres: genreDTO[];
     movieTheaters: movieTheaterDTO[];
 }
-
 
 export interface moviePutGetDTO {
     movie: movieDTO;
