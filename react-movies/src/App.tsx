@@ -3,19 +3,33 @@ import './App.css';
 import Menu from './Menu';
 import routes from './route-config';
 import configureValidations from './Validations';
+import AuthenticationContext from './auth/AuthenticationContext';
+import { useState } from 'react';
+import { claim } from './auth/auth.model';
 
 
 configureValidations();
 function App() {
 
+  const [claims, setClaims] = useState<claim[]>([
+  {name: 'email', value: 'lek.kelmendi@gmail'}
+  ]);
+
+  function isAdmin(){
+    return claims.findIndex(claim => claim.name === 'role' && claim.value === 'admin') > -1;
+  } 
+
   return (
     <BrowserRouter>
+    <AuthenticationContext.Provider value={{claims, update: setClaims }} >
     <Menu />
     <div className="container">
     <Switch>
           {routes.map(route => 
            <Route key={route.path} path={route.path} exact={route.exact}>
-           <route.component />
+            {route.isAdmin && !isAdmin() ? <>
+            You are not allowed to see this page
+            </> : <route.component />}
          </Route>)}
          </Switch>
     </div>
@@ -24,6 +38,7 @@ function App() {
                 Flix Flow {new Date().getFullYear().toString()}
             </div>
       </footer>
+      </AuthenticationContext.Provider>
     </BrowserRouter>
   )
 }
