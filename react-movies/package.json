@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "-": "^0.0.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@react-leaflet/core": "1.0.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^11.2.6",

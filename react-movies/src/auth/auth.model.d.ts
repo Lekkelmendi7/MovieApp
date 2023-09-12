@@ -1,19 +1,19 @@
-export interface claim{
+export interface claim {
     name: string;
     value: string;
-}
+} 
 
 export interface UserCredentials {
     email: string;
     password: string;
 }
 
-export interface authenticationResponse {
+export interface authenticationResponse{
     token: string;
-    expiration: string;
+    expiration: Date;
 }
 
-export interface userDTO{
+export interface userDTO {
     id: string;
     email: string;
 }
