@@ -18,7 +18,7 @@ namespace MoviesAPI.Controllers
         private readonly IConfiguration configuration;
         private readonly IMapper mapper;
 
-        public AccountsController(UserManager<IdentityUser> userManager, 
+        public AccountsController(UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManger,
             IConfiguration configuration,
             IMapper mapper)
@@ -31,13 +31,13 @@ namespace MoviesAPI.Controllers
 
 
         [HttpPost("create")]
-        public async Task<ActionResult<AuthenticationReponse>> Create(
+        public async Task<ActionResult<AuthenticationResponse>> Create(
             [FromBody] UserCredentials userCredentials)
         {
             var user = new IdentityUser { UserName = userCredentials.Email, Email = userCredentials.Email };
             var result = await userManager.CreateAsync(user, userCredentials.Password);
 
-            if(result.Succeeded)
+            if (result.Succeeded)
             {
                 return BuildToken(userCredentials);
             }
@@ -46,10 +46,10 @@ namespace MoviesAPI.Controllers
                 return BadRequest(result.Errors);
             }
 
-    }
+        }
 
         [HttpPost("login")]
-        public async Task<ActionResult<AuthenticationReponse>> Login([FromBody] UserCredentials userCredentials)
+        public async Task<ActionResult<AuthenticationResponse>> Login([FromBody] UserCredentials userCredentials)
         {
             var result = await signInManger.PasswordSignInAsync(userCredentials.Email,
                 userCredentials.Password, isPersistent: false, lockoutOnFailure: false);
@@ -71,8 +71,8 @@ namespace MoviesAPI.Controllers
             {
                 new Claim("email", userCredentials.Email)
             };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["keyjwt"])));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256) ;
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["keyjwt"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var expiration = DateTime.UtcNow.AddYears(1);
 
@@ -86,4 +86,6 @@ namespace MoviesAPI.Controllers
             };
 
         }
+    }
 }
+

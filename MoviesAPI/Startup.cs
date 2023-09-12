@@ -34,10 +34,10 @@ namespace MoviesAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
-            sqlOptions => sqlOptions.UseNetTopologySuite()));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+                sqlOptions => sqlOptions.UseNetTopologySuite()));
 
-            services.AddScoped<IFileStorageService, InAppStorageService > ();
+            services.AddScoped<IFileStorageService, InAppStorageService>();
             services.AddHttpContextAccessor();
 
             services.AddControllers(options =>
@@ -45,8 +45,6 @@ namespace MoviesAPI
                 options.Filters.Add(typeof(MyExceptionFilter));
                 options.Filters.Add(typeof(ParseBadRequest));
             }).ConfigureApiBehaviorOptions(BadRequestsBehavior.Parse);
-
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
 
             services.AddSwaggerGen(c =>
             {
@@ -56,20 +54,6 @@ namespace MoviesAPI
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
-                {
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = false,
-                        ValidateAudience = false,
-                        ValidateLifetime = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(
-                            Encoding.UTF8.GetBytes(Configuration["keyjwt"])),
-                        ClockSkew = TimeSpan.Zero
-                    };
-                });
 
             services.AddCors(options =>
             {
@@ -90,6 +74,20 @@ namespace MoviesAPI
             services.AddSingleton<GeometryFactory>(NtsGeometryServices
                 .Instance.CreateGeometryFactory(srid: 4326));
 
+            // Configure JWT Bearer authentication once
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(
+                            Encoding.UTF8.GetBytes(Configuration["keyjwt"])),
+                        ClockSkew = TimeSpan.Zero
+                    };
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

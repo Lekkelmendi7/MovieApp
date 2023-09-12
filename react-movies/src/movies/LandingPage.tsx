@@ -4,7 +4,6 @@ import { urlMovies } from '../endpoints';
 import AlertContext from '../utils/AlertContext';
 import { landingPageDTO } from './movies.model';
 import MoviesList from './MoviesList';
-import Authorized from '../auth/Authorized';
 
 export default function LandingPage() {
 
@@ -25,11 +24,6 @@ export default function LandingPage() {
       loadData();
     }}>
 
-      <Authorized 
-      authorized = {<>You are authorized</>}
-      notAuthorized = {<>You are not authorized</>}
-       role='admin'
-      />
       <h3>In Theaters</h3>
       <MoviesList movies={movies.inTheaters} />
 

@@ -4,16 +4,19 @@ import Menu from './Menu';
 import routes from './route-config';
 import configureValidations from './Validations';
 import AuthenticationContext from './auth/AuthenticationContext';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { claim } from './auth/auth.model';
+import { getClaims } from './auth/handleJWT';
 
 
 configureValidations();
 function App() {
 
-  const [claims, setClaims] = useState<claim[]>([
-  {name: 'email', value: 'lek.kelmendi@gmail'}
-  ]);
+  const [claims, setClaims] = useState<claim[]>([]);
+
+  useEffect(() => {
+    setClaims(getClaims())
+  }, [])
 
   function isAdmin(){
     return claims.findIndex(claim => claim.name === 'role' && claim.value === 'admin') > -1;
