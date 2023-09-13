@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0y2EUQQ0/eNt92yaXJRBEwLBHsRXBS+A6JSgF/J2mG0=",
+  "Hash": "t9dOOAMeYTUwJ0mGU9xchBqFDydBYl3WrXKcgyNwEZA=",
   "Source": "MoviesAPI",
   "BasePath": "_content/MoviesAPI",
   "Mode": "Default",
@@ -374,6 +374,23 @@
       "OriginalItemSpec": "wwwroot\\actors\\fe6d0f15-eaf6-4e09-b7f3-e3377eb3bedd.jpg"
     },
     {
+      "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\2a68affb-11b0-445e-ad78-bc465303237d.jpg",
+      "SourceId": "MoviesAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\",
+      "BasePath": "_content/MoviesAPI",
+      "RelativePath": "movies/2a68affb-11b0-445e-ad78-bc465303237d.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\movies\\2a68affb-11b0-445e-ad78-bc465303237d.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\2f78752a-e767-4193-8c53-95ec0fa13a3f.jpg",
       "SourceId": "MoviesAPI",
       "SourceType": "Discovered",
@@ -423,23 +440,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\movies\\6d48dbf2-37a7-4a66-a47c-1f317efe3224.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\73a90f4c-07bb-40a6-a605-2a7341c08dc3.jpg",
-      "SourceId": "MoviesAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\",
-      "BasePath": "_content/MoviesAPI",
-      "RelativePath": "movies/73a90f4c-07bb-40a6-a605-2a7341c08dc3.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\movies\\73a90f4c-07bb-40a6-a605-2a7341c08dc3.jpg"
     },
     {
       "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\a8eef97f-b910-4a27-b363-a04a13bd666d.jpg",

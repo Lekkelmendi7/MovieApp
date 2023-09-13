@@ -56,6 +56,7 @@ export default function IndexEntity<T>(props: indexEntityProps<T>) {
     return (
         <>
             <h3>{props.title}</h3>
+
             {props.createURL ? <Link className="btn btn-primary" 
             to={props.createURL}>Create {props.entityName}</Link> : null}
             
@@ -80,9 +81,9 @@ export default function IndexEntity<T>(props: indexEntityProps<T>) {
 
 interface indexEntityProps<T> {
     url: string;
-    createURL ?: string;
+    createURL?: string;
     title: string;
-    entityName ?: string;
+    entityName?: string;
     children(entities: T[],
         buttons: (editUrl: string, id: number) => ReactElement): ReactElement;
 }

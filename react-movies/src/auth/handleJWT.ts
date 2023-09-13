@@ -1,5 +1,4 @@
-import { authenticationResponse, claim } from "./auth.models";
-
+import {authenticationResponse, claim} from './auth.models';
 
 const tokenKey = 'token';
 const expirationKey = 'token-expiration'

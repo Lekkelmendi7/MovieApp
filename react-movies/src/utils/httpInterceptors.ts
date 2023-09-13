@@ -1,19 +1,18 @@
 import axios from "axios";
-import { getToken } from "../auth/handleJWT";
+import {getToken} from '../auth/handleJWT';
 
-export default function configureInterceptor () {
+export default function configureInterceptor(){
     axios.interceptors.request.use(
         function (config){
             const token = getToken();
 
-            if(token){
+            if (token){
                 config.headers.Authorization = `bearer ${token}`;
             }
 
-            return config
+            return config;
         },
-
-        function(error){
+        function (error){
             return Promise.reject(error);
         }
     )

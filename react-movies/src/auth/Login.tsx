@@ -36,7 +36,7 @@ export default function Login(){
              onSubmit={async values => await login(values)}
             />
             <h6 style={{marginTop: '30px'}}>If you don't have an account, please <a href="/register" style={{textDecoration: 'none'}}>Register</a></h6>
-        <h6 style={{marginTop: '30px'}}><a href="/reset" style={{textDecoration: 'none'}}>Forgot your password ?</a></h6>  
+        <h6 style={{marginTop: '30px'}}><a href="/resetPassword" style={{textDecoration: 'none'}}>Forgot your password ?</a></h6>  
         </>
     )
 }
