@@ -1,5 +1,5 @@
-import React from "react";
-import { claim } from "./auth.model";
+import React from 'react';
+import { claim } from './auth.models';
 
 
 const AuthenticationContext = React.createContext<{

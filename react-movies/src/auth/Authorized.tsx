@@ -1,9 +1,8 @@
-import { useContext, useEffect, useState } from "react";
-import { ReactElement } from "react-markdown/lib/react-markdown"
+import { ReactElement, useContext, useEffect, useState } from "react";
 import AuthenticationContext from "./AuthenticationContext";
 
 export default function Authorized(props: authorizedProps){
-    const[isAuthorized, setIsAuthorized] = useState(true);
+    const [isAuthorized, setIsAuthorized] = useState(true);
     const {claims} = useContext(AuthenticationContext);
 
     useEffect(() => {
@@ -16,17 +15,15 @@ export default function Authorized(props: authorizedProps){
         }
     }, [claims, props.role]);
 
-
-    return(
+    return (
         <>
-        {isAuthorized ? props.authorized : props.notAuthorized}
+            {isAuthorized ? props.authorized : props.notAuthorized}
         </>
     )
 }
 
-
-export interface authorizedProps{
+interface authorizedProps{
     authorized: ReactElement;
     notAuthorized?: ReactElement;
-    role ?: string; 
+    role?: string;
 }

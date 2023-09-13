@@ -1,37 +1,36 @@
-import { Form, Formik, FormikHelpers } from "formik";
-import { UserCredentials } from "./auth.model";
+
+import {Form, Formik, FormikHelpers} from 'formik';
 import * as Yup from 'yup';
-import TextField from "../forms/TextField";
-import Button from "../utils/Button";
-import { Link } from "react-router-dom";
+import TextField from '../forms/TextField';
+import Button from '../utils/Button';
+import { Link } from 'react-router-dom';
+import { userCredentials } from './auth.models';
 
-
-export default function AuthForm(props: authFormProps) {
+export default function AuthForm(props: authFormProps){
     return (
         <Formik
-        initialValues={props.model}
-        onSubmit={props.onSubmit}
-        validationSchema={Yup.object({
-            email: Yup.string().required('This field is required to fill!')
-            .email('You have to insert a valid email!'),
-            password: Yup.string().required('This field is required to fill!')
-        })}
+            initialValues={props.model}
+            onSubmit={props.onSubmit}
+            validationSchema={Yup.object({
+                email: Yup.string().required('This field is required')
+                    .email('You have to insert a valid email'),
+                password: Yup.string().required('This field is required')
+            })}
         >
             {formikProps => (
                 <Form>
                     <TextField displayName="Email" field="email" />
-                    <TextField displayName="Password" field="password" type="password"/>
+                    <TextField displayName="Password" field="password" type="password" />
 
                     <Button disabled={formikProps.isSubmitting} type="submit">Send</Button>
                     <Link className="btn btn-secondary" to="/">Cancel</Link>
                 </Form>
             )}
-            </Formik>
+        </Formik>
     )
 }
 
-
-export interface authFormProps{
-    model: UserCredentials;
-    onSubmit(values: UserCredentials, actions: FormikHelpers<UserCredentials>): void;
+interface authFormProps{
+    model: userCredentials;
+    onSubmit(values: userCredentials, actions: FormikHelpers<userCredentials>): void; 
 }

@@ -13,7 +13,7 @@ export interface movieDTO {
     genres: genreDTO[];
     movieTheaters: movieTheaterDTO[];
     actors: actorMovieDTO[];
-    uservote: number;
+    userVote: number;
     averageVote: number;
 }
 

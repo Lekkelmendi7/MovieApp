@@ -7,9 +7,8 @@ import coordinateDTO from "../utils/coordinates.model";
 import Loading from "../utils/Loading";
 import Map from "../utils/Map";
 import { movieDTO } from "./movies.model";
-import Rating from "../utils/Rating";
+import Ratings from '../utils/Ratings';
 import Swal from "sweetalert2";
-import MoviesList from "./MoviesList";
 
 export default function MovieDetails() {
 
@@ -24,11 +23,13 @@ export default function MovieDetails() {
             })
     }, [id])
 
-    function transformCoordinates(): coordinateDTO[]{
-        if (movie?.movieTheaters){
+    function transformCoordinates(): coordinateDTO[] {
+        if (movie?.movieTheaters) {
             const coordinates = movie.movieTheaters.map(movieTheater => {
-                return {lat: movieTheater.latitude, lng: movieTheater.longitude,
-                name: movieTheater.name} as coordinateDTO
+                return {
+                    lat: movieTheater.latitude, lng: movieTheater.longitude,
+                    name: movieTheater.name
+                } as coordinateDTO
             });
 
             return coordinates;
@@ -51,10 +52,10 @@ export default function MovieDetails() {
         return `https://www.youtube.com/embed/${videoId}`;
     }
 
-    function handleRate(rate: number){
-     axios.post(urlRatings, {ratins: rate, movieId: id}).then(() => {
-        Swal.fire({icon: 'success', title: 'Rating Recieved'})
-     })
+    function handleRate(rate: number) {
+        axios.post(urlRatings, { rating: rate, movieId: id }).then(() => {
+            Swal.fire({ icon: 'success', title: 'Rating received' });
+        })
     }
 
     return (
@@ -66,9 +67,8 @@ export default function MovieDetails() {
                     to={`/movies/filter?genreId=${genre.id}`}
                 >{genre.name}</Link>
             )} | {movie.releaseDate.toDateString()}
-            | Your rating score: <Rating maximumValue={10} selectedValue={movie.uservote} 
-            onChange={handleRate} /> | Average Vote: {movie.averageVote}
-
+            | Your vote: <Ratings maximumValue={10} selectedValue={movie.userVote}
+                onChange={handleRate} /> | Average Vote: {movie.averageVote}
 
             <div style={{ display: 'flex', marginTop: '1rem' }}>
                 <span style={{ display: 'inline-block', marginRight: '1rem' }}>

@@ -3,7 +3,7 @@ export interface claim {
     value: string;
 } 
 
-export interface UserCredentials {
+export interface userCredentials {
     email: string;
     password: string;
 }

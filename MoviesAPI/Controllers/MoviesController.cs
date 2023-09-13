@@ -14,9 +14,9 @@ using System.Threading.Tasks;
 
 namespace MoviesAPI.Controllers
 {
-    [ApiController]
     [Route("api/movies")]
-    [Authorize(AuthenticationSchemes =JwtBearerDefaults.AuthenticationScheme)]
+    [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "IsAdmin")]
     public class MoviesController : ControllerBase
     {
         private readonly ApplicationDbContext context;
@@ -54,9 +54,8 @@ namespace MoviesAPI.Controllers
                 .ToListAsync();
 
             var landingPageDTO = new LandingPageDTO();
-            landingPageDTO.upcomingReleases = mapper.Map<List<MovieDTO>>(upcomingReleases);
-            landingPageDTO.
-                inTheaters = mapper.Map<List<MovieDTO>>(inTheaters);
+            landingPageDTO.UpcomingReleases = mapper.Map<List<MovieDTO>>(upcomingReleases);
+            landingPageDTO.InTheaters = mapper.Map<List<MovieDTO>>(inTheaters);
             return landingPageDTO;
         }
 
@@ -86,15 +85,16 @@ namespace MoviesAPI.Controllers
             {
                 return NotFound();
             }
+
             var averageVote = 0.0;
             var userVote = 0;
 
-            if( await context.Ratings.AnyAsync( x => x.MovieId == id))
+            if (await context.Ratings.AnyAsync(x => x.MovieId == id))
             {
                 averageVote = await context.Ratings.Where(x => x.MovieId == id)
                     .AverageAsync(x => x.Rate);
 
-                if(HttpContext.User.Identity.IsAuthenticated)
+                if (HttpContext.User.Identity.IsAuthenticated)
                 {
                     var email = HttpContext.User.Claims.FirstOrDefault(x => x.Type == "email").Value;
                     var user = await userManager.FindByEmailAsync(email);
@@ -103,14 +103,12 @@ namespace MoviesAPI.Controllers
                     var ratingDb = await context.Ratings.FirstOrDefaultAsync(x => x.MovieId == id
                     && x.UserId == userId);
 
-                    if(ratingDb != null)
+                    if (ratingDb != null)
                     {
                         userVote = ratingDb.Rate;
                     }
-
                 }
             }
-
 
             var dto = mapper.Map<MovieDTO>(movie);
             dto.AverageVote = averageVote;
