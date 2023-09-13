@@ -104,11 +104,10 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpPost("resetPassword")]
-        [AllowAnonymous] 
-        public async Task<ActionResult> ResetPassword([FromBody] PasswordResetRequest resetRequest)
+        public async Task<ActionResult> ResetPassword([FromBody] UserCredentials userCredentials)
         {
             
-            var user = await userManager.FindByEmailAsync(resetRequest.Email);
+            var user = await userManager.FindByEmailAsync(userCredentials.Email);
             if (user == null)
             {
                 
@@ -119,7 +118,7 @@ namespace MoviesAPI.Controllers
             var resetToken = await userManager.GeneratePasswordResetTokenAsync(user);
 
             
-            var resetResult = await userManager.ResetPasswordAsync(user, resetToken, resetRequest.NewPassword);
+            var resetResult = await userManager.ResetPasswordAsync(user, resetToken, userCredentials.Password);
 
             if (resetResult.Succeeded)
             {

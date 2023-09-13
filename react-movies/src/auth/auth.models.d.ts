@@ -17,3 +17,8 @@ export interface userDTO {
     id: string;
     email: string;
 }
+
+export interface ResetPasswordCredential {
+    email: string;
+    password: string;
+}

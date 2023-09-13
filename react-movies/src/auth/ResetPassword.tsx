@@ -14,11 +14,11 @@ export default function Login(){
     const {update} = useContext(AuthenticationContext);
     const history = useHistory();
 
-    async function login(credentials: userCredentials){
+    async function reset(credentials: userCredentials){
         try {
             setErrors([]);
             const response = await axios
-            .post<authenticationResponse>(`${urlAccounts}/login`, credentials);
+            .post<authenticationResponse>(`${urlAccounts}/resetPassword`, credentials);
             saveToken(response.data);
             update(getClaims());
             history.push('/');
@@ -30,13 +30,12 @@ export default function Login(){
 
     return (
         <>
-            <h3>Login</h3>
+            <h3>Reset Password</h3>
             <DisplayErrors errors={errors} />
             <AuthForm model={{email: '', password: ''}}
-             onSubmit={async values => await login(values)}
+             onSubmit={async values => await reset(values)}
             />
-            <h6 style={{marginTop: '30px'}}>If you don't have an account, please <a href="/register" style={{textDecoration: 'none'}}>Register</a></h6>
-        <h6 style={{marginTop: '30px'}}><a href="/reset" style={{textDecoration: 'none'}}>Forgot your password ?</a></h6>  
+            
         </>
     )
 }
