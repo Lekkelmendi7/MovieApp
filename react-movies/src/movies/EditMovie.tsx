@@ -51,7 +51,7 @@ export default function EditMovie(){
 
     return (
         <>
-            <h3>Edit Movie</h3>
+            <h3>Edit</h3>
             <DisplayErrors errors={errors} />
             {movie && moviePutGet ? <MovieForm model={movie}
                 onSubmit={async values => await edit(values)}

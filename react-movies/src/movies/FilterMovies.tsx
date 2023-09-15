@@ -107,7 +107,7 @@ export default function FilterMovies() {
                             <div className="row gx-3 align-items-center mb-3">
                                 <div className="col-auto">
                                     <input type="text" className="form-control" id="title"
-                                        placeholder="Title of the movie"
+                                        placeholder="Movie title"
                                         {...formikProps.getFieldProps("title")}
                                     />
                                 </div>
@@ -115,7 +115,7 @@ export default function FilterMovies() {
                                     <select className="form-select"
                                         {...formikProps.getFieldProps("genreId")}
                                     >
-                                        <option value="0">--Choose a genre--</option>
+                                        <option value="0">--Choose genres--</option>
                                         {genres.map(genre => <option key={genre.id}
                                             value={genre.id}
                                         >{genre.name}</option>)}
@@ -126,7 +126,7 @@ export default function FilterMovies() {
                                         <Field className="form-check-input" id="upcomingReleases"
                                             name="upcomingReleases" type="checkbox" />
                                         <label className="form-check-label"
-                                            htmlFor="upcomingReleases">Upcoming Releases</label>
+                                            htmlFor="upcomingReleases">Coming soon</label>
                                     </div>
                                 </div>
                                 <div className="col-auto">
@@ -134,7 +134,7 @@ export default function FilterMovies() {
                                         <Field className="form-check-input" id="inTheaters"
                                             name="inTheaters" type="checkbox" />
                                         <label className="form-check-label"
-                                            htmlFor="inTheaters">In Theaters</label>
+                                            htmlFor="inTheaters">In theaters</label>
                                     </div>
                                 </div>
                                 <div className="col-auto">
@@ -146,7 +146,7 @@ export default function FilterMovies() {
                                             formikProps.setValues(initialValues);
                                             searchMovies(initialValues)
                                         }}
-                                    >Clear</Button>
+                                    >Cancel</Button>
                                 </div>
                             </div>
                         </Form>

@@ -54,7 +54,7 @@ export default function MovieDetails() {
 
     function handleRate(rate: number) {
         axios.post(urlRatings, { rating: rate, movieId: id }).then(() => {
-            Swal.fire({ icon: 'success', title: 'Rating received' });
+            Swal.fire({ icon: 'success', title: 'Done'});
         })
     }
 
@@ -67,8 +67,8 @@ export default function MovieDetails() {
                     to={`/movies/filter?genreId=${genre.id}`}
                 >{genre.name}</Link>
             )} | {movie.releaseDate.toDateString()}
-            | Your vote: <Ratings maximumValue={10} selectedValue={movie.userVote}
-                onChange={handleRate} /> | Average Vote: {movie.averageVote}
+            | Give it a rating: <Ratings maximumValue={10} selectedValue={movie.userVote}
+                onChange={handleRate} /> | Average grade: {movie.averageVote}
 
             <div style={{ display: 'flex', marginTop: '1rem' }}>
                 <span style={{ display: 'inline-block', marginRight: '1rem' }}>
@@ -123,7 +123,7 @@ export default function MovieDetails() {
             }
 
             {movie.movieTheaters && movie.movieTheaters.length > 0 ? <div>
-                <h2>Showing on</h2>
+                <h2>Displaying map</h2>
                 <Map coordinates={transformCoordinates()} readOnly={true} />
             </div> : null}
         </div> : <Loading />

@@ -11,7 +11,7 @@ export default function GenericList(props: genericListProps){
         if (props.emptyListUI){
             return props.emptyListUI;
         }
-        return <>There are no elements to display</>
+        return <>No element to display</>
     } else{
         return props.children;
     }

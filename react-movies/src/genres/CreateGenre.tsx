@@ -24,7 +24,7 @@ export default function CreateGenre() {
 
     return (
         <>
-            <h3>Create Genre</h3>
+            <h3>Create a genre</h3>
             <DisplayErrors errors={errors} />
             <GenreForm model={{ name: '' }}
                 onSubmit={async value => {

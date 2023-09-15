@@ -47,7 +47,7 @@ export default function CreateMovie() {
 
     return (
         <>
-            <h3>Create Movie</h3>
+            <h3>Create movie</h3>
             <DisplayErrors errors={errors} />
             {loading ? <Loading /> :
                 <MovieForm model={{ title: '', inTheaters: false, trailer: '' }}

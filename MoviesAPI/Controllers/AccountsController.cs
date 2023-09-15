@@ -104,7 +104,7 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpPost("resetPassword")]
-        public async Task<ActionResult> ResetPassword([FromBody] UserCredentials userCredentials)
+        public async Task<ActionResult<AuthenticationResponse>> ResetPassword([FromBody] UserCredentials userCredentials)
         {
             
             var user = await userManager.FindByEmailAsync(userCredentials.Email);
