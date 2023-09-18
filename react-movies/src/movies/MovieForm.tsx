@@ -44,16 +44,16 @@ export default function MovieForm(props: movieFormProps) {
                 props.onSubmit(values, actions)
             }}
             validationSchema={Yup.object({
-                title: Yup.string().required('This field is required to fill').firstLetterUpperCase()
+                title: Yup.string().required('This field is required').firstLetterUpperCase()
             })}
         >
             {(formikProps) => (
                 <Form>
 
                     <TextField displayName="Title" field="title" />
-                    <CheckboxField displayName="In theater" field="inTheaters" />
+                    <CheckboxField displayName="In Theaters" field="inTheaters" />
                     <TextField displayName="Trailer" field="trailer" />
-                    <DateField displayName="Date of release" field="releaseDate" />
+                    <DateField displayName="Release Date" field="releaseDate" />
                     <ImageField displayName="Poster" field="poster"
                         imageURL={props.model.posterURL}
                     />
@@ -71,7 +71,7 @@ export default function MovieForm(props: movieFormProps) {
                     />
 
                     <MultipleSelector
-                        displayName="Theaters"
+                        displayName="Movie Theaters"
                         nonSelected={nonSelectedMovieTheaters}
                         selected={selectedMovieTheaters}
                         onChange={(selected, nonSelected) => {
@@ -111,7 +111,6 @@ export default function MovieForm(props: movieFormProps) {
         </Formik>
     )
 }
-
 interface movieFormProps {
     model: movieCreationDTO;
     onSubmit(values: movieCreationDTO, actions: FormikHelpers<movieCreationDTO>): void;

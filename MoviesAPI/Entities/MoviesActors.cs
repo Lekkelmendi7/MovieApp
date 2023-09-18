@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoviesAPI.Entities
 {
-    public class MovieActors
+    public class MoviesActors
     {
         public int ActorId { get; set; }
         public int MovieId { get; set; }

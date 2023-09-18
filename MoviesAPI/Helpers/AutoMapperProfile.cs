@@ -101,15 +101,15 @@ namespace MoviesAPI.Helpers
             return result;
         }
 
-        private List<MovieGenres> MapMoviesGenres(MovieCreationDTO movieCreationDTO, Movie movie)
+        private List<MoviesGenres> MapMoviesGenres(MovieCreationDTO movieCreationDTO, Movie movie)
         {
-            var result = new List<MovieGenres>();
+            var result = new List<MoviesGenres>();
 
             if (movieCreationDTO.GenresIds == null) { return result; }
 
             foreach (var id in movieCreationDTO.GenresIds)
             {
-                result.Add(new MovieGenres() { GenreId = id });
+                result.Add(new MoviesGenres() { GenreId = id });
             }
 
             return result;
@@ -130,15 +130,15 @@ namespace MoviesAPI.Helpers
             return result;
         }
 
-        private List<MovieActors> MapMoviesActors(MovieCreationDTO movieCreationDTO, Movie movie)
+        private List<MoviesActors> MapMoviesActors(MovieCreationDTO movieCreationDTO, Movie movie)
         {
-            var result = new List<MovieActors>();
+            var result = new List<MoviesActors>();
 
             if (movieCreationDTO.Actors == null) { return result; }
 
             foreach (var actor in movieCreationDTO.Actors)
             {
-                result.Add(new MovieActors() { ActorId = actor.Id, Character = actor.Character });
+                result.Add(new MoviesActors() { ActorId = actor.Id, Character = actor.Character });
             }
 
             return result;

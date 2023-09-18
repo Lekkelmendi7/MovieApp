@@ -23,11 +23,10 @@ export default function LandingPage() {
     <AlertContext.Provider value={() => {
       loadData();
     }}>
-
-      <h3>In theaters</h3>
+      <h3>In Theaters</h3>
       <MoviesList movies={movies.inTheaters} />
 
-      <h3>Coming soon</h3>
+      <h3>Upcoming Releases</h3>
       <MoviesList movies={movies.upcomingReleases} />
     </AlertContext.Provider>
 

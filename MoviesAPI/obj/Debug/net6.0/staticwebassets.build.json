@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZRZxcZti08y3YeNbfUM3AS335uItqEcuRt2OcdOF7NA=",
+  "Hash": "04SySD9950itWpHXduwTpz9dIi+xEm4VePwiKmbRvCM=",
   "Source": "MoviesAPI",
   "BasePath": "_content/MoviesAPI",
   "Mode": "Default",
@@ -83,23 +83,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\actors\\382c0880-9314-4c48-a16d-a2c58b1bb8a6.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\actors\\40f02fa2-a5c2-41b1-8a18-87420b2f84d0.jpg",
-      "SourceId": "MoviesAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\",
-      "BasePath": "_content/MoviesAPI",
-      "RelativePath": "actors/40f02fa2-a5c2-41b1-8a18-87420b2f84d0.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\actors\\40f02fa2-a5c2-41b1-8a18-87420b2f84d0.jpg"
     },
     {
       "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\actors\\478edd48-7f6d-4ce6-b03e-0b1bb6613c85.jpg",
@@ -357,6 +340,23 @@
       "OriginalItemSpec": "wwwroot\\actors\\fe6d0f15-eaf6-4e09-b7f3-e3377eb3bedd.jpg"
     },
     {
+      "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\1f53053d-531f-4da2-b9bb-4195828167b3.jpg",
+      "SourceId": "MoviesAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\",
+      "BasePath": "_content/MoviesAPI",
+      "RelativePath": "movies/1f53053d-531f-4da2-b9bb-4195828167b3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\movies\\1f53053d-531f-4da2-b9bb-4195828167b3.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\2a68affb-11b0-445e-ad78-bc465303237d.jpg",
       "SourceId": "MoviesAPI",
       "SourceType": "Discovered",
@@ -372,40 +372,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\movies\\2a68affb-11b0-445e-ad78-bc465303237d.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\2f78752a-e767-4193-8c53-95ec0fa13a3f.jpg",
-      "SourceId": "MoviesAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\",
-      "BasePath": "_content/MoviesAPI",
-      "RelativePath": "movies/2f78752a-e767-4193-8c53-95ec0fa13a3f.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\movies\\2f78752a-e767-4193-8c53-95ec0fa13a3f.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\572edd95-f1d5-4481-a611-1264471c438b.jpg",
-      "SourceId": "MoviesAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\",
-      "BasePath": "_content/MoviesAPI",
-      "RelativePath": "movies/572edd95-f1d5-4481-a611-1264471c438b.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\movies\\572edd95-f1d5-4481-a611-1264471c438b.jpg"
     },
     {
       "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\6d48dbf2-37a7-4a66-a47c-1f317efe3224.jpg",
@@ -425,12 +391,12 @@
       "OriginalItemSpec": "wwwroot\\movies\\6d48dbf2-37a7-4a66-a47c-1f317efe3224.jpg"
     },
     {
-      "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\a8eef97f-b910-4a27-b363-a04a13bd666d.jpg",
+      "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\91b1f7c3-1c9b-4b5d-9b2c-b002c45c1427.jpg",
       "SourceId": "MoviesAPI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\",
       "BasePath": "_content/MoviesAPI",
-      "RelativePath": "movies/a8eef97f-b910-4a27-b363-a04a13bd666d.jpg",
+      "RelativePath": "movies/91b1f7c3-1c9b-4b5d-9b2c-b002c45c1427.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -439,7 +405,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\movies\\a8eef97f-b910-4a27-b363-a04a13bd666d.jpg"
+      "OriginalItemSpec": "wwwroot\\movies\\91b1f7c3-1c9b-4b5d-9b2c-b002c45c1427.jpg"
     },
     {
       "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\ab1eba34-dc60-4d50-ac93-f2bf46b21cc8.jpg",
@@ -491,6 +457,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\movies\\d592ceb7-07aa-44de-861b-12ef9d5c2860.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\movies\\ded689f9-a4c0-426a-8393-a3ec4a6d3888.jpg",
+      "SourceId": "MoviesAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ShopZone\\MovieApp\\MoviesAPI\\wwwroot\\",
+      "BasePath": "_content/MoviesAPI",
+      "RelativePath": "movies/ded689f9-a4c0-426a-8393-a3ec4a6d3888.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\movies\\ded689f9-a4c0-426a-8393-a3ec4a6d3888.jpg"
     }
   ]
 }
