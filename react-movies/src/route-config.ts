@@ -21,7 +21,6 @@ import RedirectToLandingPage from './utils/RedirectToLandingPage';
 import Register from './auth/Register';
 import Login from './auth/Login';
 import IndexUsers from './auth/IndexUsers';
-import ResetPassword from "./auth/ResetPassword";
 
 const routes = [
     {path: '/genres', component: IndexGenres, exact: true, isAdmin: true},
@@ -43,7 +42,6 @@ const routes = [
 
     {path: '/register', component: Register},
     {path: '/login', component: Login},
-    {path: '/reset', component: ResetPassword},
     {path: '/users', component: IndexUsers, isAdmin: true},
 
 

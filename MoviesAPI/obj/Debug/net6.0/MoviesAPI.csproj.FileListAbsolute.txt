@@ -80,3 +80,8 @@ C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Crypt
 C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\Scrutor.dll
+C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\ShopZone\MovieApp\MoviesAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Annotations.dll
