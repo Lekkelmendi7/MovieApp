@@ -22,6 +22,8 @@ import Register from './auth/Register';
 import Login from './auth/Login';
 import IndexUsers from './auth/IndexUsers';
 
+
+
 const routes = [
     {path: '/genres', component: IndexGenres, exact: true, isAdmin: true},
     {path: '/genres/create', component: CreateGenre, isAdmin: true},
@@ -44,6 +46,7 @@ const routes = [
     {path: '/login', component: Login},
     {path: '/users', component: IndexUsers, isAdmin: true},
 
+   
 
     {path: '/', component: LandingPage, exact: true},
     {path: '*', component: RedirectToLandingPage}

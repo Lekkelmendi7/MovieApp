@@ -1,5 +1,6 @@
-import {actorCreationDTO} from '../actors/actors.model'
+import {actorCreationDTO} from '../actors/actors.model';
 import { movieCreationDTO } from '../movies/movies.model';
+
 
 export function convertActorToFormData(actor: actorCreationDTO): FormData{
     const formData = new FormData();
@@ -47,6 +48,8 @@ export function convertMovieToFormData(movie: movieCreationDTO){
 
     return formData;
 }
+
+
 
 function formatDate(date: Date){
     date = new Date(date);

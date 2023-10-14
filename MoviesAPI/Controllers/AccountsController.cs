@@ -103,30 +103,7 @@ namespace MoviesAPI.Controllers
             }
         }
 
-        [HttpPost("resetPassword")]
-        public async Task<ActionResult> ResetPassword([FromBody] UserCredentials userCredentials)
-        {
-            var user = await userManager.FindByEmailAsync(userCredentials.Email);
-
-            if (user == null)
-            {
-                return NotFound("User not found");
-            }
-
-            var resetToken = await userManager.GeneratePasswordResetTokenAsync(user);
-
-            var resetResult = await userManager.ResetPasswordAsync(user, resetToken, userCredentials.Password);
-
-            if (resetResult.Succeeded)
-            {
-                return Ok("Password reset successful");
-            }
-            else
-            {
-                return BadRequest(resetResult.Errors);
-            }
-        }
-
+        
         private async Task<AuthenticationResponse> BuildToken(UserCredentials userCredentials)
         {
             var claims = new List<Claim>()

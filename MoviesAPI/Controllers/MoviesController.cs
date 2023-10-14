@@ -117,6 +117,7 @@ namespace MoviesAPI.Controllers
             return dto;
         }
 
+
         [HttpGet("filter")]
         [AllowAnonymous]
         public async Task<ActionResult<List<MovieDTO>>> Filter([FromQuery] FilterMoviesDTO filterMoviesDTO)

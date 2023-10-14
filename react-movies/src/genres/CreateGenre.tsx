@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { urlGenres } from '../endpoints';
+import {  urlGenres } from '../endpoints';
 import GenreForm from './GenreForm';
-import { genreCreationDTO } from './genres.model';
 import DisplayErrors from '../utils/DisplayingErrors';
+import { genreCreationDTO } from './genres.model';
 
 export default function CreateGenre() {
     const history = useHistory();
