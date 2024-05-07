@@ -46,6 +46,16 @@ export default function Menu() {
                                     </NavLink>
                                 </li>
                                 <li className="nav-item">
+                                    <NavLink className="nav-link" to="/shtetet">
+                                        Shtetet
+                                    </NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to="/studentet">
+                                        Studentet
+                                    </NavLink>
+                                </li>
+                                <li className="nav-item">
                                     <NavLink className="nav-link" to="/movies/create">
                                         Add a movie
                                     </NavLink>

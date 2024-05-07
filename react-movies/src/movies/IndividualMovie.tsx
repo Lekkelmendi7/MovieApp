@@ -33,7 +33,7 @@ export default function IndividualMovie(props: movieDTO) {
                 role="admin"
                 authorized={<>
                     <div>
-                        <Link style={{ marginRight: '1rem' }} className="btn btn-info"
+                        <Link style={{ marginRight: '1rem' }} className="btn btn-warning"
                             to={`/movies/edit/${props.id}`}
                         >Edit</Link>
                         <Button

@@ -5,3 +5,13 @@ export const urlMovieTheaters = `${baseURL}/movietheaters`;
 export const urlMovies = `${baseURL}/movies`;
 export const urlAccounts = `${baseURL}/accounts`;
 export const urlRatings = `${baseURL}/ratings`;
+
+
+/**
+ LAB 1 
+
+ Detyra 1 - Studenti dhe Shteti
+
+ */
+export const urlStudentet = `${baseURL}/studentet`;
+export const urlShtetet = `${baseURL}/shtetet`;

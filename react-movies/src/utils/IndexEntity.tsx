@@ -45,7 +45,7 @@ export default function IndexEntity<T>(props: indexEntityProps<T>) {
     }
 
     const buttons = (editUrl: string, id: number) => <>
-        <Link className="btn btn-success"
+        <Link className="btn btn-warning"
             to={editUrl}>Edit</Link>
 
         <Button

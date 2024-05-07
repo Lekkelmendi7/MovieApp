@@ -21,6 +21,12 @@ import RedirectToLandingPage from './utils/RedirectToLandingPage';
 import Register from './auth/Register';
 import Login from './auth/Login';
 import IndexUsers from './auth/IndexUsers';
+import CreateShteti from "./lab1/shtetet/CreateShteti";
+import EditShteti from "./lab1/shtetet/EditShteti";
+import IndexShtetet from "./lab1/shtetet/IndexShtetet";
+import CreateStudenti from "./lab1/studentet/CreateStudenti";
+import EditStudenti from "./lab1/studentet/EditStudenti";
+import IndexStudentet from "./lab1/studentet/IndexStudentet";
 
 const routes = [
     {path: '/genres', component: IndexGenres, exact: true, isAdmin: true},
@@ -35,6 +41,7 @@ const routes = [
     {path: '/movietheaters/create', component: CreateMovieTheater, isAdmin: true},
     {path: '/movietheaters/edit/:id(\\d+)', component: EditMovieTheater, isAdmin: true},
 
+
     {path: '/movies/create', component: CreateMovie, isAdmin: true},
     {path: '/movies/edit/:id(\\d+)', component: EditMovie, isAdmin: true},
     {path: '/movies/filter', component: FilterMovies},
@@ -43,6 +50,24 @@ const routes = [
     {path: '/register', component: Register},
     {path: '/login', component: Login},
     {path: '/users', component: IndexUsers, isAdmin: true},
+
+
+    //LAB 1 Detyra
+
+    //Detyra 1 Studenti - Shteti
+
+    //Studenti routes
+    {path: '/studentet', component: IndexStudentet, exact: true, isAdmin: true},
+    {path: '/studentet/create', component: CreateStudenti, isAdmin: true},
+    {path: '/studentet/edit/:id(\\d+)', component: EditStudenti, isAdmin: true},
+
+    //Shteti routes
+    {path: '/shtetet', component: IndexShtetet, exact: true, isAdmin: true},
+    {path: '/shtetet/create', component: CreateShteti, isAdmin: true},
+    {path: '/shtetet/edit/:id(\\d+)', component: EditShteti, isAdmin: true},
+
+
+
 
 
     {path: '/', component: LandingPage, exact: true},
