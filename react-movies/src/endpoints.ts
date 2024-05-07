@@ -15,3 +15,13 @@ export const urlRatings = `${baseURL}/ratings`;
  */
 export const urlStudentet = `${baseURL}/studentet`;
 export const urlShtetet = `${baseURL}/shtetet`;
+
+
+/**
+ LAB 1 
+
+ Detyra 2 - Ndertesa dhe Lifti
+
+ */
+ export const urlNdertesat202152581 = `${baseURL}/ndertesat202152581`;
+ export const urlLiftet202152581 = `${baseURL}/liftet202152581`;

@@ -27,6 +27,12 @@ import IndexShtetet from "./lab1/shtetet/IndexShtetet";
 import CreateStudenti from "./lab1/studentet/CreateStudenti";
 import EditStudenti from "./lab1/studentet/EditStudenti";
 import IndexStudentet from "./lab1/studentet/IndexStudentet";
+import IndexNdertesat202152581 from "./lab1/ndertesat202152581/IndexNdertesat202152581";
+import CreateNdertesa202152581 from "./lab1/ndertesat202152581/CreateNdertesa202152581";
+import EditNdertesa202152581 from "./lab1/ndertesat202152581/EditNdertesa202152581";
+import CreateLifti202152581 from "./lab1/liftet202152581/CreateLifti202152581";
+import EditLifti202152581 from "./lab1/liftet202152581/EditLifti202152581";
+import IndexLiftet202152581 from "./lab1/liftet202152581/IndexLiftet202152581";
 
 const routes = [
     {path: '/genres', component: IndexGenres, exact: true, isAdmin: true},
@@ -65,6 +71,21 @@ const routes = [
     {path: '/shtetet', component: IndexShtetet, exact: true, isAdmin: true},
     {path: '/shtetet/create', component: CreateShteti, isAdmin: true},
     {path: '/shtetet/edit/:id(\\d+)', component: EditShteti, isAdmin: true},
+
+ //LAB 1 Detyra
+
+    //Detyra 2 Lifti - Ndertesa
+
+    //Studenti routes
+    {path: '/ndertesat', component: IndexNdertesat202152581, exact: true, isAdmin: true},
+    {path: '/ndertesat/create', component: CreateNdertesa202152581, isAdmin: true},
+    {path: '/ndertesat/edit/:id(\\d+)', component: EditNdertesa202152581, isAdmin: true},
+
+    //Shteti routes
+    {path: '/liftet202152581', component: IndexLiftet202152581, exact: true, isAdmin: true},
+    {path: '/liftet202152581/create', component: CreateLifti202152581, isAdmin: true},
+    {path: '/liftet202152581/edit/:id(\\d+)', component: EditLifti202152581, isAdmin: true},
+
 
 
 

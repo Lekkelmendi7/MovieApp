@@ -21,14 +21,14 @@ export default function EditStudenti() {
 
     return (
         <>
-            <EditEntity<studentiCreationDTO, studentiDTO>
+             <EditEntity<studentiCreationDTO, studentiDTO>
                 url={urlStudentet} entityName="Studentet202152581"
                 indexURL="/studentet"
             >
                 {(entity, edit) =>
                     <StudentiForm
                         model={entity}
-                        shtetet={shtetet} // Passing the shtetet data to the form
+                        shtetet={shtetet} 
                         onSubmit={async value => {
                             await edit(value);
                         }}
