@@ -1,3 +1,4 @@
+// EditStudenti.tsx
 import { useState, useEffect } from "react";
 import axios from "axios";
 import EditEntity from "../../utils/EditEntity";
@@ -10,7 +11,7 @@ export default function EditStudenti() {
     const [shtetet, setShtetet] = useState<shtetiDTO[]>([]);
 
     useEffect(() => {
-        axios.get(`${urlShtetet}/all`)
+        axios.get(`${urlShtetet}/`)
             .then(response => {
                 setShtetet(response.data);
             })
@@ -21,7 +22,7 @@ export default function EditStudenti() {
 
     return (
         <>
-             <EditEntity<studentiCreationDTO, studentiDTO>
+            <EditEntity<studentiCreationDTO, studentiDTO>
                 url={urlStudentet} entityName="Studentet202152581"
                 indexURL="/studentet"
             >
@@ -32,6 +33,7 @@ export default function EditStudenti() {
                         onSubmit={async value => {
                             await edit(value);
                         }}
+                        shtetiId={entity.shtetiId} // Ensure shtetiId is passed here
                     />
                 }
             </EditEntity>

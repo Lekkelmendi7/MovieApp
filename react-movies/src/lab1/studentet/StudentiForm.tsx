@@ -1,3 +1,4 @@
+// StudentiForm.tsx
 import { Form, Formik, Field, FormikHelpers } from "formik";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import * as Yup from 'yup';
@@ -7,6 +8,13 @@ import { shtetiDTO } from "../shtetet/shtetet.model";
 import { useEffect, useState } from "react";
 import axios, { AxiosResponse } from "axios";
 import { urlShtetet } from "../../endpoints";
+
+interface StudentiFormProps {
+  model: studentiCreationDTO;
+  shtetet: shtetiDTO[]; // Add shtetet prop here
+  shtetiId: number; // Add shtetiId prop here
+  onSubmit(values: studentiCreationDTO, action: FormikHelpers<studentiCreationDTO>): void;
+}
 
 export default function StudentiForm(props: StudentiFormProps) {
   const initialValues: studentiCreationDTO = {
@@ -54,7 +62,7 @@ export default function StudentiForm(props: StudentiFormProps) {
             <label htmlFor="shtetiId" className="form-label">Shteti</label>
             <Field as="select" id="shtetiId" name="shtetiId" className="form-select">
               <option value="0">--Choose a shteti--</option>
-              {shtetet.map(shteti => (
+              {props.shtetet.map(shteti => (
                 <option key={shteti.id} value={shteti.id}>{shteti.name}</option>
               ))}
             </Field>
@@ -65,10 +73,4 @@ export default function StudentiForm(props: StudentiFormProps) {
       )}
     </Formik>
   );
-}
-
-interface StudentiFormProps {
-  model: studentiCreationDTO;
-  onSubmit(values: studentiCreationDTO, action: FormikHelpers<studentiCreationDTO>): void;
-  shtetiId: number;
 }
