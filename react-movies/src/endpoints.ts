@@ -24,4 +24,4 @@ export const urlShtetet = `${baseURL}/shtetet`;
 
  */
  export const urlNdertesat202152581 = `${baseURL}/ndertesat202152581`;
- export const urlLiftet202152581 = `${baseURL}/liftet202152581`;
+ export const urlLiftat202152581 = `${baseURL}/liftat202152581`;

@@ -37,8 +37,8 @@ export default function StudentiForm(props: StudentiFormProps) {
   }, []);
 
   useEffect(() => {
-    if (query.get('genreId')){
-      initialValues.shtetiId = parseInt(query.get('genreId')!, 10);
+    if (query.get('ndertesaId')){
+      initialValues.shtetiId = parseInt(query.get('ndertesaId')!, 10);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
