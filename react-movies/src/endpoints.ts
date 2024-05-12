@@ -25,3 +25,13 @@ export const urlShtetet = `${baseURL}/shtetet`;
  */
  export const urlNdertesat202152581 = `${baseURL}/ndertesat202152581`;
  export const urlLiftat202152581 = `${baseURL}/liftat202152581`;
+
+
+ /**
+ LAB 1 
+
+ Detyra 3 - Planeti dhe Sateliti
+
+ */
+ export const urlPlanetet202152581 = `${baseURL}/planets202152581`;
+ export const urlSatellites202152581 = `${baseURL}/satellites202152581`;

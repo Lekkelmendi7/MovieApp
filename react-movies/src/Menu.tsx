@@ -37,33 +37,40 @@ export default function Menu() {
                                 Filter movies
                             </NavLink>
                         </li>
-                        <li className={`nav-item dropdown${showDropdown ? ' show' : ''}`}>
-                            <button
-                                className="nav-link btn btn-link dropdown-toggle"
-                                onClick={() => setShowDropdown(!showDropdown)}
-                                aria-expanded={showDropdown ? "true" : "false"}
-                            >
-                                Dropdown link
-                            </button>
-                            <div className={`dropdown-menu${showDropdown ? ' show' : ''}`}>
-                                <NavLink className="dropdown-item" to="/studentet">
-                                    Studentet
-                                </NavLink>
-                                <NavLink className="dropdown-item" to="/shtetet">
-                                    Shtetet
-                                </NavLink>
-                                <NavLink className="dropdown-item" to="/ndertesat">
-                                    Ndertesat
-                                </NavLink>
-                                <NavLink className="dropdown-item" to="/liftet">
-                                    Liftet
-                                </NavLink>
-                            </div>
-                        </li>
+                       
                         <Authorized
                             role="admin"
                             authorized={
                                 <>
+                                <li className={`nav-item dropdown${showDropdown ? ' show' : ''}`}>
+                <button
+                    className="nav-link btn btn-link dropdown-toggle"
+                    onClick={() => setShowDropdown(!showDropdown)}
+                    aria-expanded={showDropdown ? "true" : "false"}
+                >
+                    Dropdown link
+                </button>
+                <div className={`dropdown-menu${showDropdown ? ' show' : ''}`}>
+                    <NavLink className="dropdown-item" to="/studentet">
+                        Studentet
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/shtetet">
+                        Shtetet
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/ndertesat">
+                                    Ndertesat
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/liftet">
+                                    Liftet
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/planets">
+                                    Planetet
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/satellites">
+                                    Satelitet
+                    </NavLink>
+                </div>
+            </li>
                                     <li className="nav-item">
                                         <NavLink className="nav-link" to="/genres">
                                             Genres

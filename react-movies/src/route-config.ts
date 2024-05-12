@@ -33,6 +33,12 @@ import EditNdertesa202152581 from "./lab1/ndertesat202152581/EditNdertesa2021525
 import IndexLiftet202152581 from "./lab1/liftet202152581/IndexLiftet202152581";
 import CreateLifti202152581 from "./lab1/liftet202152581/CreateLifti202152581";
 import EditLifti202152581 from "./lab1/liftet202152581/EditLifti202152581";
+import IndexPlanetet from "./lab1/planets/IndexPlanetet";
+import CreatePlaneti from "./lab1/planets/CreatePlaneti";
+import EditPlaneti from "./lab1/planets/EditPlaneti";
+import CreateSatellite from "./lab1/satellites/CreateSatellite";
+import EditSatellite from "./lab1/satellites/EditSatellite";
+import IndexSatellites from "./lab1/satellites/IndexSatellites";
 
 
 const routes = [
@@ -86,6 +92,20 @@ const routes = [
     {path: '/liftet', component: IndexLiftet202152581, exact: true, isAdmin: true},
     {path: '/liftet/create', component: CreateLifti202152581, isAdmin: true},
     {path: '/liftet/edit/:id(\\d+)', component: EditLifti202152581, isAdmin: true},
+
+    //LAB 1 Detyra
+
+    //Detyra 2 Lifti - Ndertesa
+
+    //Ndertesa routes
+    {path: '/planets', component: IndexPlanetet, exact: true, isAdmin: true},
+    {path: '/planets/create', component: CreatePlaneti, isAdmin: true},
+    {path: '/planets/edit/:id(\\d+)', component: EditPlaneti, isAdmin: true},
+
+    //Lifti routes
+    {path: '/satellites', component: IndexSatellites, exact: true, isAdmin: true},
+    {path: '/satellites/create', component: CreateSatellite, isAdmin: true},
+    {path: '/satellites/edit/:id(\\d+)', component: EditSatellite, isAdmin: true},
 
 
 
