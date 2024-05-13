@@ -35,3 +35,13 @@ export const urlShtetet = `${baseURL}/shtetet`;
  */
  export const urlPlanetet202152581 = `${baseURL}/planets202152581`;
  export const urlSatellites202152581 = `${baseURL}/satellites202152581`;
+
+
+  /**
+ LAB 1 
+
+ Detyra 4 - Skulptura dhe skulptori
+
+ */
+ export const urlSculptors202152581 = `${baseURL}/sculptors202152581`;
+ export const urlSculptures202152581 = `${baseURL}/sculptures202152581`;

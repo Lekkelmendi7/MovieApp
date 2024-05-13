@@ -39,6 +39,12 @@ import EditPlaneti from "./lab1/planets/EditPlaneti";
 import CreateSatellite from "./lab1/satellites/CreateSatellite";
 import EditSatellite from "./lab1/satellites/EditSatellite";
 import IndexSatellites from "./lab1/satellites/IndexSatellites";
+import IndexSculptors from "./lab1/sculptors/IndexSculptors";
+import CreateSculptor from "./lab1/sculptors/CreateSculptor";
+import EditSculptor from "./lab1/sculptors/EditSculptor";
+import IndexSculptures from "./lab1/sculptures/IndexSculptures";
+import CreateSculpture from "./lab1/sculptures/CreateSculpture";
+import SculptureEdit from "./lab1/sculptures/EditSculpture";
 
 
 const routes = [
@@ -95,7 +101,7 @@ const routes = [
 
     //LAB 1 Detyra
 
-    //Detyra 2 Lifti - Ndertesa
+    //Detyra 3 Lifti - Ndertesa
 
     //Ndertesa routes
     {path: '/planets', component: IndexPlanetet, exact: true, isAdmin: true},
@@ -106,6 +112,20 @@ const routes = [
     {path: '/satellites', component: IndexSatellites, exact: true, isAdmin: true},
     {path: '/satellites/create', component: CreateSatellite, isAdmin: true},
     {path: '/satellites/edit/:id(\\d+)', component: EditSatellite, isAdmin: true},
+
+     //LAB 1 Detyra
+
+    //Detyra 4 Lifti - Ndertesa
+
+    //Ndertesa routes
+    {path: '/sculptors', component: IndexSculptors, exact: true, isAdmin: true},
+    {path: '/sculptors/create', component: CreateSculptor, isAdmin: true},
+    {path: '/sculptors/edit/:id(\\d+)', component: EditSculptor, isAdmin: true},
+
+    //Lifti routes
+    {path: '/sculptures', component: IndexSculptures, exact: true, isAdmin: true},
+    {path: '/sculptures/create', component: CreateSculpture, isAdmin: true},
+    {path: '/sculptures/edit/:id(\\d+)', component: SculptureEdit, isAdmin: true},
 
 
 
