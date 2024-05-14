@@ -54,3 +54,12 @@ export const urlShtetet = `${baseURL}/shtetet`;
  */
  export const urlTeams202152581 = `${baseURL}/teams202152581`;
  export const urlPlayers202152581 = `${baseURL}/players202152581`;
+
+    /**
+ LAB 1 
+
+ Detyra 6
+
+ */
+ export const urlPersonat202152581 = `${baseURL}/personat202152581`;
+ export const urlBankat202152581 = `${baseURL}/bankat202152581`;

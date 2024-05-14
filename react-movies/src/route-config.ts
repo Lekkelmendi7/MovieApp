@@ -51,6 +51,12 @@ import IndexPlayers from "./lab1/players/IndexPlayers";
 import IndexTeams from "./lab1/teams/IndexTeams";
 import CreateTeam from "./lab1/teams/CreateTeam";
 import EditTeam from "./lab1/teams/EditTeam";
+import CreatePersoni from "./lab1/personat/CreatePersoni";
+import EditPersoni from "./lab1/personat/EditPersoni";
+import CreateBanka from "./lab1/bankat/CreateBanka";
+import EditBanka from "./lab1/bankat/EditBanka";
+import IndexBankat from "./lab1/bankat/IndexBankat";
+import IndexPersonat from "./lab1/personat/IndexPersonat";
 
 
 const routes = [
@@ -142,6 +148,15 @@ const routes = [
     {path: '/teams', component: IndexTeams, exact: true, isAdmin: true},
     {path: '/teams/create', component: CreateTeam, isAdmin: true},
     {path: '/teams/edit/:id(\\d+)', component: EditTeam, isAdmin: true},
+
+    {path: '/bankat', component: IndexBankat, exact: true, isAdmin: true},
+    {path: '/bankat/create', component: CreateBanka, isAdmin: true},
+    {path: '/bankat/edit/:id(\\d+)', component: EditBanka, isAdmin: true},
+
+    //Lifti routes
+    {path: '/personat', component: IndexPersonat, exact: true, isAdmin: true},
+    {path: '/personat/create', component: CreatePersoni, isAdmin: true},
+    {path: '/personat/edit/:id(\\d+)', component: EditPersoni, isAdmin: true},
 
 
 
