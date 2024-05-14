@@ -45,3 +45,12 @@ export const urlShtetet = `${baseURL}/shtetet`;
  */
  export const urlSculptors202152581 = `${baseURL}/sculptors202152581`;
  export const urlSculptures202152581 = `${baseURL}/sculptures202152581`;
+
+   /**
+ LAB 1 
+
+ Detyra 5 
+
+ */
+ export const urlTeams202152581 = `${baseURL}/teams202152581`;
+ export const urlPlayers202152581 = `${baseURL}/players202152581`;

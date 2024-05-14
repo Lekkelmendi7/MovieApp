@@ -75,6 +75,12 @@ export default function Menu() {
                     <NavLink className="dropdown-item" to="/sculptures">
                                     Sculptures
                     </NavLink>
+                    <NavLink className="dropdown-item" to="/teams">
+                                    Teams
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/players">
+                                    Players
+                    </NavLink>
                 </div>
             </li>
                                     <li className="nav-item">

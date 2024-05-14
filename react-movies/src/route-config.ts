@@ -45,6 +45,12 @@ import EditSculptor from "./lab1/sculptors/EditSculptor";
 import IndexSculptures from "./lab1/sculptures/IndexSculptures";
 import CreateSculpture from "./lab1/sculptures/CreateSculpture";
 import SculptureEdit from "./lab1/sculptures/EditSculpture";
+import CreatePlayer from "./lab1/players/CreatePlayer";
+import EditPlayer from "./lab1/players/EditPlayer";
+import IndexPlayers from "./lab1/players/IndexPlayers";
+import IndexTeams from "./lab1/teams/IndexTeams";
+import CreateTeam from "./lab1/teams/CreateTeam";
+import EditTeam from "./lab1/teams/EditTeam";
 
 
 const routes = [
@@ -128,7 +134,14 @@ const routes = [
     {path: '/sculptures/edit/:id(\\d+)', component: SculptureEdit, isAdmin: true},
 
 
+    {path: '/players', component: IndexPlayers, exact: true, isAdmin: true},
+    {path: '/players/create', component: CreatePlayer, isAdmin: true},
+    {path: '/players/edit/:id(\\d+)', component: EditPlayer, isAdmin: true},
 
+    //Lifti routes
+    {path: '/teams', component: IndexTeams, exact: true, isAdmin: true},
+    {path: '/teams/create', component: CreateTeam, isAdmin: true},
+    {path: '/teams/edit/:id(\\d+)', component: EditTeam, isAdmin: true},
 
 
 
