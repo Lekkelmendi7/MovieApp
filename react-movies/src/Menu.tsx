@@ -87,6 +87,15 @@ export default function Menu() {
                     <NavLink className="dropdown-item" to="/personat">
                                     Personat
                     </NavLink>
+                    
+
+                    
+                    <NavLink className="dropdown-item" to="/bankatt">
+                                    Bankatt
+                    </NavLink>
+                    <NavLink className="dropdown-item" to="/personatt">
+                                    Personatt
+                    </NavLink>
                 </div>
             </li>
                                     <li className="nav-item">

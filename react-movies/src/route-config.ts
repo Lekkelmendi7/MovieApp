@@ -161,6 +161,18 @@ const routes = [
 
 
 
+    // {path: '/bankatt', component: IndexBankatt, exact: true, isAdmin: true},
+    // {path: '/bankatt/create', component: CreateBankaa, isAdmin: true},
+    // {path: '/bankatt/edit/:id(\\d+)', component: EditBankaa, isAdmin: true},
+
+    // //Lifti routes
+    // {path: '/personatt', component: IndexPersonatt, exact: true, isAdmin: true},
+    // {path: '/personatt/create', component: CreatePersonii, isAdmin: true},
+    // {path: '/personatt/edit/:id(\\d+)', component: EditPersonii, isAdmin: true},
+
+
+
+
     {path: '/', component: LandingPage, exact: true},
     {path: '*', component: RedirectToLandingPage}
 ];

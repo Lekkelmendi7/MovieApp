@@ -4,13 +4,12 @@ import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import DisplayingErrors from '../../utils/DisplayingErrors';
 import { urlBankat202152581, urlPersonat202152581 } from '../../endpoints';
-import PlayerForm from './PersoniForm';
 import { bankaDTO } from '../bankat/bankat.model';
 import { personiCreationDTO } from './personat.model';
 import PersoniForm from './PersoniForm';
 
 
-export default function CreatePlayer() {
+export default function CreatePersoni() {
   const history = useHistory();
   const [errors, setErrors] = useState<string[]>([]);
   const [bankas, setbankat] = useState<bankaDTO[]>([]);
@@ -25,9 +24,9 @@ export default function CreatePlayer() {
       });
   }, []);
 
-  async function create(banka: personiCreationDTO) {
+  async function create(personi: personiCreationDTO) {
     try {
-      await axios.post(urlPersonat202152581, banka);
+      await axios.post(urlPersonat202152581, personi);
       history.push('/personat');
     } catch (error: any) {
       if (error && error.response) {

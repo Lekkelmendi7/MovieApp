@@ -63,3 +63,22 @@ export const urlShtetet = `${baseURL}/shtetet`;
  */
  export const urlPersonat202152581 = `${baseURL}/personat202152581`;
  export const urlBankat202152581 = `${baseURL}/bankat202152581`;
+
+
+
+
+
+
+
+
+
+
+ 
+    /**
+ LAB 1 
+
+ Detyra Mbrojtje Lab 1
+
+ */
+ export const urlPersonatt202152581 = `${baseURL}/personatt202152581`;
+ export const urlBankatt202152581 = `${baseURL}/bankatt202152581`;

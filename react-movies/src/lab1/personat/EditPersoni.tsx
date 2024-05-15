@@ -8,7 +8,7 @@ import { personiCreationDTO, personiDTO } from "./personat.model";
 import { bankaDTO } from "../bankat/bankat.model";
 
 
-export default function EditPlayer() {
+export default function EditPersoni() {
     const [bankas, setBankat] = useState<bankaDTO[]>([]);
 
     useEffect(() => {
