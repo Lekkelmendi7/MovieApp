@@ -51,51 +51,13 @@ export default function Menu() {
                     Dropdown link
                 </button>
                 <div className={`dropdown-menu${showDropdown ? ' show' : ''}`}>
-                    <NavLink className="dropdown-item" to="/studentet">
+                    {/* <NavLink className="dropdown-item" to="/studentet">
                         Studentet
                     </NavLink>
                     <NavLink className="dropdown-item" to="/shtetet">
                         Shtetet
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/ndertesat">
-                                    Ndertesat
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/liftet">
-                                    Liftet
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/planets">
-                                    Planetet
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/satellites">
-                                    Satelitet
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/sculptors">
-                                    Sculptors
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/sculptures">
-                                    Sculptures
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/teams">
-                                    Teams
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/players">
-                                    Players
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/bankat">
-                                    Bankat
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/personat">
-                                    Personat
-                    </NavLink>
-                    
-
-                    
-                    <NavLink className="dropdown-item" to="/bankatt">
-                                    Bankatt
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/personatt">
-                                    Personatt
-                    </NavLink>
+                    </NavLink> */}
+                   
                 </div>
             </li>
                                     <li className="nav-item">

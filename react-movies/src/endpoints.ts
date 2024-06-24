@@ -10,64 +10,12 @@ export const urlRatings = `${baseURL}/ratings`;
 /**
  LAB 1 
 
- Detyra 1 - Studenti dhe Shteti
+ Detyrat
 
  */
-export const urlStudentet = `${baseURL}/studentet`;
-export const urlShtetet = `${baseURL}/shtetet`;
 
 
-/**
- LAB 1 
-
- Detyra 2 - Ndertesa dhe Lifti
-
- */
- export const urlNdertesat202152581 = `${baseURL}/ndertesat202152581`;
- export const urlLiftat202152581 = `${baseURL}/liftat202152581`;
-
-
- /**
- LAB 1 
-
- Detyra 3 - Planeti dhe Sateliti
-
- */
- export const urlPlanetet202152581 = `${baseURL}/planets202152581`;
- export const urlSatellites202152581 = `${baseURL}/satellites202152581`;
-
-
-  /**
- LAB 1 
-
- Detyra 4 - Skulptura dhe skulptori
-
- */
- export const urlSculptors202152581 = `${baseURL}/sculptors202152581`;
- export const urlSculptures202152581 = `${baseURL}/sculptures202152581`;
-
-   /**
- LAB 1 
-
- Detyra 5 
-
- */
- export const urlTeams202152581 = `${baseURL}/teams202152581`;
- export const urlPlayers202152581 = `${baseURL}/players202152581`;
-
-    /**
- LAB 1 
-
- Detyra 6
-
- */
- export const urlPersonat202152581 = `${baseURL}/personat202152581`;
- export const urlBankat202152581 = `${baseURL}/bankat202152581`;
-
-
-
-
-
+ 
 
 
 
@@ -80,5 +28,3 @@ export const urlShtetet = `${baseURL}/shtetet`;
  Detyra Mbrojtje Lab 1
 
  */
- export const urlPersonatt202152581 = `${baseURL}/personatt202152581`;
- export const urlBankatt202152581 = `${baseURL}/bankatt202152581`;
