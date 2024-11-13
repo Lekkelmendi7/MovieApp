@@ -18,10 +18,10 @@ namespace MoviesAPI.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.10")
+                .HasAnnotation("ProductVersion", "8.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -56,7 +56,7 @@ namespace MoviesAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
@@ -146,7 +146,7 @@ namespace MoviesAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
@@ -227,7 +227,7 @@ namespace MoviesAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Biography")
                         .HasColumnType("nvarchar(max)");
@@ -254,7 +254,7 @@ namespace MoviesAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -272,7 +272,7 @@ namespace MoviesAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<bool>("InTheaters")
                         .HasColumnType("bit");
@@ -297,6 +297,42 @@ namespace MoviesAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Movies");
+                });
+
+            modelBuilder.Entity("MoviesAPI.Entities.MovieTheater", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<Point>("Location")
+                        .HasColumnType("geography");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(75)
+                        .HasColumnType("nvarchar(75)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MovieTheaters");
+                });
+
+            modelBuilder.Entity("MoviesAPI.Entities.MovieTheatersMovies", b =>
+                {
+                    b.Property<int>("MovieTheaterId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MovieTheaterId", "MovieId");
+
+                    b.HasIndex("MovieId");
+
+                    b.ToTable("MovieTheatersMovies");
                 });
 
             modelBuilder.Entity("MoviesAPI.Entities.MoviesActors", b =>
@@ -336,49 +372,13 @@ namespace MoviesAPI.Migrations
                     b.ToTable("MoviesGenres");
                 });
 
-            modelBuilder.Entity("MoviesAPI.Entities.MovieTheater", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<Point>("Location")
-                        .HasColumnType("geography");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(75)
-                        .HasColumnType("nvarchar(75)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("MovieTheaters");
-                });
-
-            modelBuilder.Entity("MoviesAPI.Entities.MovieTheatersMovies", b =>
-                {
-                    b.Property<int>("MovieTheaterId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MovieId")
-                        .HasColumnType("int");
-
-                    b.HasKey("MovieTheaterId", "MovieId");
-
-                    b.HasIndex("MovieId");
-
-                    b.ToTable("MovieTheatersMovies");
-                });
-
             modelBuilder.Entity("MoviesAPI.Entities.Rating", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("MovieId")
                         .HasColumnType("int");
@@ -449,6 +449,25 @@ namespace MoviesAPI.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("MoviesAPI.Entities.MovieTheatersMovies", b =>
+                {
+                    b.HasOne("MoviesAPI.Entities.Movie", "Movie")
+                        .WithMany("MovieTheatersMovies")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MoviesAPI.Entities.MovieTheater", "MovieTheater")
+                        .WithMany()
+                        .HasForeignKey("MovieTheaterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Movie");
+
+                    b.Navigation("MovieTheater");
+                });
+
             modelBuilder.Entity("MoviesAPI.Entities.MoviesActors", b =>
                 {
                     b.HasOne("MoviesAPI.Entities.Actor", "Actor")
@@ -485,25 +504,6 @@ namespace MoviesAPI.Migrations
                     b.Navigation("Genre");
 
                     b.Navigation("Movie");
-                });
-
-            modelBuilder.Entity("MoviesAPI.Entities.MovieTheatersMovies", b =>
-                {
-                    b.HasOne("MoviesAPI.Entities.Movie", "Movie")
-                        .WithMany("MovieTheatersMovies")
-                        .HasForeignKey("MovieId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MoviesAPI.Entities.MovieTheater", "MovieTheater")
-                        .WithMany()
-                        .HasForeignKey("MovieTheaterId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Movie");
-
-                    b.Navigation("MovieTheater");
                 });
 
             modelBuilder.Entity("MoviesAPI.Entities.Rating", b =>
