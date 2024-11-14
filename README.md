@@ -79,5 +79,20 @@ This movie app offers a complete experience for both moviegoers and admins. User
 
 Photos of the project:
 
-![Screenshot_15-11-2024_02220_localhost](https://github.com/user-attachments/assets/a4e0e9cf-9e37-4e2e-aa3f-342701347f9e)
+![Screenshot_15-11-2024_02242_localhost](https://github.com/user-attachments/assets/79257ced-99f7-4916-bad8-85ac24208de9)
+![Screenshot_15-11-2024_02232_localhost](https://github.com/user-attachments/assets/f4785119-bb7c-47ed-9098-b77daf033e36)
+![Screenshot_15-11-2024_02220_localhost](https://github.com/user-attachments/assets/4f00381e-9fc5-43a6-ad59-61a0abc7efd5)
+![Screenshot_15-11-2024_02149_localhost](https://github.com/user-attachments/assets/24af1e0c-b993-4506-91c6-5f5898139191)
+![Screenshot_15-11-2024_02135_localhost](https://github.com/user-attachments/assets/8349c2b3-198c-4504-ba6f-339f01c53c42)
+![Screenshot_15-11-2024_02058_localhost](https://github.com/user-attachments/assets/002de46f-a51c-4bdf-8e70-94e993116f34)
+![Screenshot_15-11-2024_01958_localhost](https://github.com/user-attachments/assets/ec5d3904-7f5d-480a-bc90-f2bac3a9bcdd)
+![Screenshot_15-11-2024_0242_localhost](https://github.com/user-attachments/assets/7a85ff74-2ba2-4293-93a9-1afc1f8a65e9)
+![Screenshot_15-11-2024_0239_localhost](https://github.com/user-attachments/assets/e9405bbe-7251-44b9-9b76-93f2b3f0ba41)
+![Screenshot_15-11-2024_0227_localhost](https://github.com/user-attachments/assets/8174af2c-5337-4cf7-8077-ba635e2a6c59)
+![Screenshot_15-11-2024_0219_localhost](https://github.com/user-attachments/assets/7c50a2a8-c57a-455d-992b-7eb1f9682de8)
+![Screenshot 2024-11-15 001735](https://github.com/user-attachments/assets/2d062709-36c4-4e25-b3dd-65b949a3b781)
+![Screenshot 2024-11-15 001726](https://github.com/user-attachments/assets/59d9d070-c193-4b80-8c3f-b5ae96d22f66)
+![Screenshot 2024-11-15 001716](https://github.com/user-attachments/assets/5fcac8ef-a4db-4015-9f0f-3c5ca8a82c0f)
+![Screenshot_15-11-2024_02256_localhost](https://github.com/user-attachments/assets/025c64ab-bf03-4fd6-b837-89c8ed3eff75)
+
 
