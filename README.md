@@ -32,8 +32,9 @@ Users can filter movies by selecting specific genres (e.g., Horror, Romance) or 
 Category Selection: Users can view movies in only one category at a time—either In Theaters or Upcoming Releases. This reduces clutter and allows users to focus on the movie category that interests them.
 Rating System
 
-4. User Ratings: Logged-in users can rate movies on a scale from 1 to 10 stars. Each rating influences the movie's average rating, providing real-time feedback on the movie’s popularity and quality.
+4. User Ratings:
 
+Logged-in users can rate movies on a scale from 1 to 10 stars. Each rating influences the movie's average rating, providing real-time feedback on the movie’s popularity and quality.
 Rating Restriction: Only logged-in users can rate movies, ensuring that the rating system is used by authenticated users, thus improving reliability and preventing spam ratings.
 Dynamic Average Rating: As users submit their ratings, the app recalculates the movie’s average rating in real-time, giving immediate feedback on how each rating affects the overall score.
 
