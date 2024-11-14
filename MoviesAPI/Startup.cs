@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MoviesAPI.APIBehavior;
@@ -26,18 +25,17 @@ namespace MoviesAPI
     {
         public Startup(IConfiguration configuration)
         {
-            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear(); // Ky rresht e largon mapimin e claims automatikisht
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
-            sqlOptions => sqlOptions.UseNetTopologySuite()));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+                sqlOptions => sqlOptions.UseNetTopologySuite()));
 
             services.AddScoped<IFileStorageService, InAppStorageService>();
             services.AddHttpContextAccessor();
@@ -55,6 +53,7 @@ namespace MoviesAPI
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                .AddJwtBearer(options =>
                {
+                   options.MapInboundClaims = false; // Ky rresht ndalon përkthimin e roleve në claims automatikisht
                    options.TokenValidationParameters = new TokenValidationParameters
                    {
                        ValidateIssuer = false,
@@ -69,7 +68,7 @@ namespace MoviesAPI
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("IsAdmin", policy => policy.RequireClaim("role", "admin"));
+                options.AddPolicy("IsAdmin", policy => policy.RequireClaim("role", "admin")); // Politika për rolin "admin"
             });
 
             services.AddSwaggerGen(options =>
@@ -104,10 +103,8 @@ namespace MoviesAPI
 
             services.AddSingleton<GeometryFactory>(NtsGeometryServices
                 .Instance.CreateGeometryFactory(srid: 4326));
-
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

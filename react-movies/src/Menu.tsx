@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import AuthenticationContext from "./auth/AuthenticationContext";
 import { Link, NavLink } from "react-router-dom";
 import Authorized from "./auth/Authorized";
@@ -7,7 +7,6 @@ import { logout } from "./auth/handleJWT";
 
 export default function Menu() {
     const { update, claims } = useContext(AuthenticationContext);
-    const [showDropdown, setShowDropdown] = useState(false);
 
     function getUserEmail(): string {
         return claims.filter((x) => x.name === "email")[0]?.value;
@@ -42,24 +41,6 @@ export default function Menu() {
                             role="admin"
                             authorized={
                                 <>
-                                <li className={`nav-item dropdown${showDropdown ? ' show' : ''}`}>
-                <button
-                    className="nav-link btn btn-link dropdown-toggle"
-                    onClick={() => setShowDropdown(!showDropdown)}
-                    aria-expanded={showDropdown ? "true" : "false"}
-                >
-                    Dropdown link
-                </button>
-                <div className={`dropdown-menu${showDropdown ? ' show' : ''}`}>
-                    {/* <NavLink className="dropdown-item" to="/studentet">
-                        Studentet
-                    </NavLink>
-                    <NavLink className="dropdown-item" to="/shtetet">
-                        Shtetet
-                    </NavLink> */}
-                   
-                </div>
-            </li>
                                     <li className="nav-item">
                                         <NavLink className="nav-link" to="/genres">
                                             Genres
@@ -93,7 +74,15 @@ export default function Menu() {
                         <Authorized
                             authorized={
                                 <>
-                                    <span className="nav-link" style={{ color: "blue", fontWeight: "bold", textAlign: "center", marginRight: "30px" }}>
+                                    <span
+                                        className="nav-link"
+                                        style={{
+                                            color: "blue",
+                                            fontWeight: "bold",
+                                            textAlign: "center",
+                                            marginRight: "30px",
+                                        }}
+                                    >
                                         Hello, {getUserEmail()}
                                     </span>
                                     <Button
@@ -112,14 +101,22 @@ export default function Menu() {
                                     <Link
                                         to="/register"
                                         className="nav-link btn btn-link"
-                                        style={{ color: "blue", fontWeight: "bold", marginRight: "10px" }}
+                                        style={{
+                                            color: "blue",
+                                            fontWeight: "bold",
+                                            marginRight: "10px",
+                                        }}
                                     >
                                         Register
                                     </Link>
                                     <Link
                                         to="/login"
                                         className="nav-link btn btn-link"
-                                        style={{ color: "blue", fontWeight: "bold", marginRight: "10px" }}
+                                        style={{
+                                            color: "blue",
+                                            fontWeight: "bold",
+                                            marginRight: "10px",
+                                        }}
                                     >
                                         Login
                                     </Link>
