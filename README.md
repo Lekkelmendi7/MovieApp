@@ -1,5 +1,5 @@
 Movie App Project – Detailed Overview
-This movie app, developed as part of a lab course at the University of Business and Technology (UBT), serves as a user-friendly platform for discovering movies while also offering a comprehensive content management system (CMS) for administrators. The app integrates various features including user authentication, movie categorization, detailed movie pages, advanced filtering, a dynamic rating system, and full administrative controls.
+This movie app, developed as part of a college project of Lab Course 1 at the University of Business and Technology (UBT), serves as a user-friendly platform for discovering movies while also offering a comprehensive content management system (CMS) for administrators. The app integrates various features including user authentication, movie categorization, detailed movie pages, advanced filtering, a dynamic rating system, and full administrative controls.
 
 Functionalities
 
